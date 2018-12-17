@@ -1,0 +1,84 @@
+
+
+/*FOOTER*/
+footer{
+	margin-top: 50px;
+	.footer_top{
+		@include linear-gradient(132deg, lighten(#8cc1ff, 20), #8cc1ff);
+		position: relative;
+		border-bottom: solid 1px white;
+
+		h3{
+			text-transform: none;
+			color: $dark-blue;
+			font-size: 2.8em;
+			padding: 40px 0 30px;
+		}
+
+		hr {
+			border-top: solid 1px white;
+			border-bottom: 0;
+			margin: 5px 0;
+		}
+
+		.footer_col {
+			margin-top: 20px;
+			position: relative;
+			z-index: 9;
+
+			h4 {
+				font-weight: 700;
+			}
+			p, a{
+				color: $dark-blue;
+			}
+			p {
+				font-size: 1.6em;
+			}
+			ul {
+				li{
+					background-image: url('../img/arrowbulletblue.png');
+					background-position: top 8px left;
+					background-repeat: no-repeat;
+				}
+			}
+
+			ul li a {
+				font-size: 1.1em;
+			}
+		}
+
+		&:after{
+			content: '';
+			height: 330px;
+			width: 330px;
+			position: absolute;
+			bottom: -50px;
+			right: 0;
+			background-image: url(../img/question-woman.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom right;
+			pointer-events: none;
+
+		}
+	}
+
+
+
+	.footer_bottom{
+		position: relative;
+		z-index: 9;
+		background: $dark-blue;
+		color: white;
+		text-align: center;
+		padding: 20px 0 0;
+
+		a{
+			color: white;
+			&:visited, &:focus, &:active {
+				color: white;
+			}
+		}
+	}
+}

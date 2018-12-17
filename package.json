@@ -1,0 +1,34 @@
+{
+  "name": "executive travel",
+  "version": "0.0.2",
+  "description": "This is the executive travel theme projects.",
+  "main": "index.php",
+  "scripts": {
+    "test": "say test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chillydesign/executivetravel.git"
+  },
+  "keywords": [
+    "wordpress",
+    "webfactor",
+    "blank",
+    "theme"
+  ],
+  "author": "Charles Harvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chillydesign/executivetravel/issues"
+  },
+  "homepage": "https://github.com/chillydesign/executivetravel#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-minify": "^3.0.15",
+    "gulp-sass": "^4.0.1",
+    "lodash": "^4.17.11",
+    "webpack": "^4.20.0"
+  }
+}

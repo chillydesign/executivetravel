@@ -1,0 +1,16 @@
+$light-blue: #a2bfdc;
+$dark-blue: #00476e;
+$background-color: #fff;
+$font-color: #484848;
+$font-stack: 'Source Sans Pro', sans-serif;
+$grey: #909090;
+
+$gradient: linear-gradient(186deg, rgb(0, 0, 0) 0%, rgb(61, 135, 202) 1%, rgb(95, 165, 218) 99%);
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+$border-radius: 7px;
