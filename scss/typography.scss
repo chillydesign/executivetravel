@@ -1,0 +1,96 @@
+
+h1 {
+    font-size: #{ $font_size * 2.5};
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: #{ $font_size * 1.8};
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: #{ $font_size * 1.4};
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+
+p {
+    font-size: $font_size;
+    line-height: $line_height;
+    padding: 0 0 20px;
+}
+
+li {
+    font-size: $font_size;
+        line-height: $line_height;
+}
+
+
+a {
+    text-decoration: none;
+    color: $brand_color;
+    transition: all 0.3s;
+    &:visited {
+        color: $brand_color;
+    }
+
+    &:hover {
+
+    }
+}
+
+a.button {
+    display: inline-block;
+    padding: 20px;
+    font-size: $font_size;
+    border: 1px solid $medium_grey;
+    border-radius: $border_radius;
+    margin:  20px 0;
+    cursor: pointer;
+
+    &.button_block {
+        display: block;
+        text-align: center;
+    }
+
+    &:hover {
+        background: $brand_color;
+        color: white;
+    }
+} // end of a .button
+
+
+em, i {
+    font-style: italic;
+}
+strong, b {
+    font-weight: bold;
+}
+
+
+
+
+table {
+    width: 100%;
+    margin:  0 0 20px;
+}
+th, td {
+    text-align: left;
+    font-size: $font_size;
+    padding: 10px;
+    line-height: $line_height;
+}
+th {
+    font-weight: bold;
+}
+tr {
+    &:nth-child(2n + 1) {
+        td {
+            background: desaturate(lighten($brand_color, 46), 20);
+        }
+    }
+}

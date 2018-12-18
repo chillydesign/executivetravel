@@ -1,9 +1,12 @@
-$brand_color: #a2bfdc;
-$brand_color: #00476e;
+$brand_color: #5bc0d5;
 $background_color: #fff;
 $font_color: #484848;
 $font_stack: 'Work Sans', arial, helvetica, 'ubuntu', verdana, sans-serif;
-$grey: #909090;
+$dark_grey: #ccc;
+$medium_grey: #aaa;
+$light_grey: #f1f1f1;
+$font_size: 1.5em;
+$line_height: 160%;
 
 $gradient: linear-gradient(186deg, rgb(0, 0, 0) 0%, rgb(61, 135, 202) 1%, rgb(95, 165, 218) 99%);
 
@@ -14,3 +17,6 @@ $gradient: linear-gradient(186deg, rgb(0, 0, 0) 0%, rgb(61, 135, 202) 1%, rgb(95
 }
 
 $border-radius: 7px;
+
+
+$header_height: 110px;

@@ -2,10 +2,12 @@
 @import 'variables';
 @import 'mixins';
 @import 'reset';
+@import 'typography';
 @import 'slick';
 @import 'header';
 @import 'footer';
-@import 'home';
+
+
 
 
 
@@ -18,4 +20,64 @@ body {
 	font-weight: normal;
 	width: 100vw;
 	overflow-x: hidden;
+
+}
+
+
+section {
+    padding: 100px 0;
+}
+
+
+// SLIDER SECTION
+// SLIDER SECTION
+section.section_slider {
+    h2 {
+        text-align: center;
+    }
+}
+// SLIDER SECTION
+// SLIDER SECTION
+
+
+// SLIDER OF LINKS SECTION
+// SLIDER OF LINKS SECTION
+section.section_slider_of_links {
+    h2 {
+        text-align: center;
+    }
+}
+// SLIDER OF LINKS SECTION
+// SLIDER OF LINKS SECTION
+
+
+
+// SLICKSLIDE
+// SLICKSLIDE
+ul.slickslider {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0;
+        position: relative;
+        .slide_image {
+            background: no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            width: 100%;
+        }
+        p {
+            position: absolute;
+            bottom:0;
+            padding: 20px;
+            background: transparentize(black, 0.6 );
+            color: white;
+            left: 0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
 }

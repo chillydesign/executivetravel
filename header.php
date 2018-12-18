@@ -28,23 +28,18 @@
 	<body <?php body_class(); ?>>
 
 
-			<header class="header" id="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-md-push-0 col-xs-10 col-sm-10">
-							<a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
-						</div>
-						<div class="col-md-9">
-							<nav id="navigation_menu" role="navigation">
-								 <ul>
-									 <?php chilly_nav('primary-navigation'); ?>
-								 </ul>
-							</nav>
-						</div>
-
-					</div>
-					<a href="#" id="menu_button" >Menu</a>
-				</div>
+        <header class="header" id="header">
+            <!-- <div class="container"></div> -->
+                <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
+                <a href="#" id="menu_button" >Menu</a>
 
 
-			</header>
+
+
+
+
+        </header>
+
+            <nav id="navigation_menu" role="navigation">
+                 <?php chilly_nav('primary-navigation'); ?>
+            </nav>
