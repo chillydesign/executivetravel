@@ -9,7 +9,7 @@ header#header {
     left: 0;
     width: 100%;
     z-index: 30;
-    background: transparentize(white, 0.5);
+    background: transparentize(white, 0.3);
     border-bottom: 2px solid white;
 
 
@@ -22,9 +22,9 @@ a.branding {
      background-image: url('../img/logo.svg');
      background-repeat: no-repeat;
      background-size: contain;
-     margin: 30px 0;
+     margin: 20px 0;
      background-position: left center;
-     height: #{$header_height - 60px};
+     height: #{$header_height - 40px};
      width: 300px;
      position: absolute;
      left: 30px;
@@ -35,8 +35,8 @@ a.branding {
      text-indent: -9999px;
     background: url('../img/menu.svg') no-repeat right center;
     background-size: contain;
-    margin: 30px 0;
-    height: #{$header_height - 60px};
+    margin: 20px 0;
+    height: #{$header_height - 40px};
     width: 30px;
     display: block;
     position: absolute;
@@ -48,7 +48,7 @@ a.branding {
 $nav_width: 300px;
 nav#navigation_menu {
     width: $nav_width;
-    background: transparentize($brand_color, 0.5);
+    background: transparentize($brand_color, 0.1);
     transform: translateX(#{$nav_width });
     transition: all 0.3s;
     position: fixed;
