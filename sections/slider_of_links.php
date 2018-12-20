@@ -12,7 +12,7 @@
         <?php $image = $link['image']; ?>
         <li>
             <a href="<?php echo $page->guid; ?>">
-            <div class="slide_image" style="background-image: url(<?php echo $image['url']; ?>);" ></div>
+            <div class="slide_image" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);" ></div>
             <p><?php echo $page->post_title; ?></p>
             </a>
         </li>

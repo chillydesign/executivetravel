@@ -12,7 +12,7 @@
             <?php foreach($links as $link): ?>
                 <?php $page = $link['page']; ?>
                 <?php $image = $link['image']; ?>
-                <a class="large_image_link" href="<?php echo $page->guid; ?>" style="background-image: url(<?php echo $image['url']; ?>);" >
+                <a class="large_image_link" href="<?php echo $page->guid; ?>" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);" >
                     <span><?php echo $page->post_title; ?></span>
                 </a>
             <?php endforeach; ?>
