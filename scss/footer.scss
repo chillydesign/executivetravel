@@ -3,6 +3,20 @@ footer {
     color: white;
     padding: 50px 0 0;
     margin: 20px 0 0;
+
+
+    form {
+        input, input[type="submit"] {
+            width: 24%;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        input[type="submit"] {
+            background: $light_blue;
+        }
+
+    }
 }
 
 

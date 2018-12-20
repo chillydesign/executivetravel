@@ -1,4 +1,5 @@
 $brand_color: #5bc0d5;
+$light_blue: #4ccedf;
 $background_color: #fff;
 $font_color: #484848;
 $font_stack: 'Work Sans', arial, helvetica, 'ubuntu', verdana, sans-serif;
@@ -20,3 +21,27 @@ $border-radius: 7px;
 
 
 $header_height: 80px;
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAndRise {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -18,7 +18,12 @@
                 <div class="col-sm-8">
                     <h3>Newsletter</h3>
                     <p>Pour être tenu au courant de nos promotions et actualités vous pouvez vous inscrire à notre newsletter ici </p>
-
+                <form action="" method="post">
+                    <input type="text" id="first_name" name="first_name" placeholder="Prénom" />
+                    <input type="text" id="last_name" name="last_name" placeholder="Nom" />
+                    <input type="text" id="email" name="email" placeholder="Adresse email" />
+                    <input type="submit" id="submit_form" name="submit_form" value="S’inscrire" />
+                </form>
 
                 </div>
             </div>

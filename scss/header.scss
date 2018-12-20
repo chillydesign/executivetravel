@@ -64,15 +64,19 @@ nav#navigation_menu {
     }
 
     ul {
-        padding: $header_height 0 0;
+        padding: #{$header_height + 10px} 0 0;
         margin: 0;
         li {
             display: block;
+            font-size: 1.1em;
             a {
                 display: block;
-                padding: 10px 20px;
+                padding: 15px 20px;
                 font-size: $font_size;
                 color: white;
+                &:hover {
+                    background: transparentize(black, 0.92);
+                }
             }
         }
     }
