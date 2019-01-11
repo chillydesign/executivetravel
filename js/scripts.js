@@ -52,6 +52,16 @@
 
 
 
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 30 && !$('a.large_image_link').hasClass("showlink")) {$('a.large_image_link').addClass('showlink'); }
+      $topbitheight = $('.section_large_image_with_links').outerHeight();
+      if ($(window).scrollTop() > $topbitheight) {
+        if (!$('header').hasClass("bottomheader")) { $('header').addClass('bottomheader'); }
+      } else {
+        $('header').removeClass('bottomheader');
+      }
+    });
+
 
 
 

@@ -8,12 +8,8 @@ header#header {
     top:0;
     left: 0;
     width: 100%;
-    z-index: 30;
-    background: transparentize(white, 0.3);
-    border-bottom: 2px solid white;
-
-
-
+    z-index: 300;
+    transition: all 0.3s;
 }
 
 a.branding {
@@ -29,10 +25,13 @@ a.branding {
      position: absolute;
      left: 30px;
      top:0;
+     filter: grayscale(1) brightness(0.2) invert(1);
+     transition: all 0.3s;
 }
 
+
  #menu_button {
-     text-indent: -9999px;
+    text-indent: -9999px;
     background: url('../img/menu.svg') no-repeat right center;
     background-size: contain;
     margin: 20px 0;
@@ -42,8 +41,17 @@ a.branding {
     position: absolute;
     right: 30px;
     top:0;
+    filter: grayscale(1) brightness(0) invert(1);
+
 
 }
+
+header#header.bottomheader{
+  background: transparentize(white, 0.05);
+  // border-bottom: 2px solid white;
+  a.branding, #menu_button {filter: grayscale(0) brightness(1) invert(0);}
+}
+
 
 $nav_width: 300px;
 nav#navigation_menu {
