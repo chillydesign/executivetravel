@@ -412,6 +412,12 @@ section.section.section_important_points {
     &:last-child {
       margin-bottom: -330px;
     }
+
+    transition: all 0.3s;
+    transform: translateY(-30px);
+    &.animate {
+        transform: translateY(0px);
+    }
   }
 
   .bloc_img {
