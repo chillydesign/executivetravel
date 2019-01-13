@@ -44,7 +44,7 @@
 
 <?php wp_footer(); ?>
 <?php $tdu = get_template_directory_uri(); ?>
-<script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyA0MhoPPsfQ5valqUXSBMDROB9rAhbsvxs&#038;ver=4.8.1'></script>
+<script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU'></script>
 <script type="text/javascript" src="<?php echo $tdu; ?>/js/min/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo $tdu; ?>/js/min/jquery.matchHeight.js"></script>
 <script type="text/javascript" src="<?php echo $tdu; ?>/js/scripts.js?v=<?php echo wf_version(); ?>"></script>

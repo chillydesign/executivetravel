@@ -598,6 +598,24 @@ function add_scheme_to_url($url, $scheme = 'http://'){
   return parse_url($url, PHP_URL_SCHEME) === null ?  $scheme . $url : $url;
 }
 
+function count_to_bootstrap_class($count){
+
+    if ($count == 1) {
+        $class = 'col-sm-12';
+    } elseif ($count == 2) {
+        $class = 'col-sm-6';
+    } elseif ($count == 3) {
+        $class = 'col-sm-4';
+    } elseif ($count == 4) {
+        $class = 'col-sm-3 col-xs-6';
+    } elseif ($count <= 6 ) {
+        $class = 'col-sm-2';
+    } else {
+        $class = 'col-sm-1';
+    }
+    return $class;
+};
+
 
 
 

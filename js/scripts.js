@@ -47,6 +47,56 @@
         });
 
 
+        //Home slider
+        $(".homeslider").slick({
+
+            // normal options...
+            infinite: true,
+            autoplay: true,
+            dots: false,
+            slidesToShow: 1,
+          fade: true
+        });
+
+        var $homesliderheight = $('section.section_large_image_with_links').outerHeight();
+        $('.homeslider li div.slide_image').css({'height' : $homesliderheight});
+
+
+      	var map_container = $('#agencymap');
+      	map_container.css({
+      		width : '100%'
+      	})
+      	var agencymap = new google.maps.Map(map_container.get(0), {
+      		// center: {lat: latitude , lng: longitude  },
+      		zoom: 14,
+      		scrollwheel: false
+      	});
+
+      	var marker, i;
+      	var locations = [[46.2256554,6.1065002, 'Agence Genève Aéroport'], [46.2028587,6.1522949, 'Agence Genève Centre']]
+      	var bounds = new google.maps.LatLngBounds();
+      	var infowindow = new google.maps.InfoWindow({content: '...'});
+      	for (i = 0; i < locations.length; i++) {
+      		var location = locations[i];
+      		var latlng = new google.maps.LatLng(location[0], location[1]),
+      		marker = new google.maps.Marker({
+      			position: latlng,
+      			map: agencymap,
+      			title: location[2]
+      		});
+      		marker.addListener('click', function() {
+      			infowindow.setContent(  this.title);
+      			infowindow.open(agencymap, this);
+      		});
+      		bounds.extend(latlng);
+      	}
+
+      	agencymap.fitBounds(bounds);
+
+        $('.map_height').matchHeight();
+
+
+
 
     });
 

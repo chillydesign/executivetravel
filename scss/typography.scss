@@ -7,7 +7,7 @@ h1 {
 
 h2 {
     font-size: #{ $font_size * 1.8};
-    margin: 0 0 35px;
+    margin: 0 0 40px;
     font-weight: normal;
     &:after {
         content: '';
@@ -23,6 +23,12 @@ h2 {
 
 h3 {
     font-size: #{ $font_size * 1.4};
+    margin: 0 0 20px;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: #{ $font_size * 1.2};
     margin: 0 0 20px;
     font-weight: normal;
 }

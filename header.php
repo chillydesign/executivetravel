@@ -12,7 +12,7 @@
         <link rel="mask-icon" href="<?php echo $tdu; ?>/img/favicon/safari-pinned-tab.svg" color="#00476e">
         <meta name="msapplication-TileColor" content="#5bc0d5">
         <meta name="theme-color" content="#5bc0d5">
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">
 
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

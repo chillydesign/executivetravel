@@ -21,4 +21,14 @@
     </div>
 <?php endif; ?>
 
-<div class="background_image" style="background-image: url(<?php echo $background_image['url']; ?>);"></div>
+<!-- <div class="background_image" style="background-image: url(<?php echo $background_image['url']; ?>);"> -->
+<div class="background_image">
+  <?php $images = get_sub_field('slider'); ?>
+  <ul class="homeslider">
+      <?php foreach ($images as $image): ?>
+          <li>
+              <div class="slide_image" style="background-image: url(<?php echo $image['sizes']['large']; ?>);" ></div>
+          </li>
+      <?php endforeach; ?>
+  </ul>
+</div>
