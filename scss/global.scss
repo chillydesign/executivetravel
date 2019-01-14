@@ -504,4 +504,11 @@ section.section_partners {
 
 section.section_offres {
   h2 {text-align: center;}
+  h6 {
+    text-align: center;
+    margin: 30px 0 0;
+    a {
+      background: $light_blue;
+    }
+  }
 }
