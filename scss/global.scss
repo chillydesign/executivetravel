@@ -413,10 +413,13 @@ section.section.section_important_points {
       margin-bottom: -330px;
     }
 
-    transition: all 0.3s;
-    transform: translateY(-30px);
+    transition: all 1s;
+
+    opacity: 0;
+    transform: translateY(50px);
     &.animate {
         transform: translateY(0px);
+        opacity: 1;
     }
   }
 
@@ -439,6 +442,7 @@ section.section.section_important_points {
     top: 40px;
     position: absolute;
     z-index: 28;
+    transition: all 0.3s;
     box-shadow: 11px 11px 29px 5px rgba(0,0,0,0.05);
     border-top: 5px solid #56c0d6;
     h3 {

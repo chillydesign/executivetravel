@@ -102,6 +102,9 @@
 
 
     var $window = $(window);
+    var $windowHeight = $window.height();
+    var $docHeight = $(document).height();
+
     $window.scroll(function() {
         var $scrollTop = $window.scrollTop();
         var $header = $('header');
@@ -120,10 +123,17 @@
         }
 
         var $blocs = $('.bloc');
-        $bloc.each(function(){
+        var $bloc_texts = $('.bloc_text');
+        var $bltxof  = 150 - ($scrollTop / $docHeight * 250) ;
+        $bloc_texts.css({
+            'transform' : 'translateY(' +  $bltxof + 'px)'
+        });
+
+        var $distanc = $windowHeight - 100;
+        $blocs.each(function(){
             var $this = $(this);
-            $distanceFromTop = $this.getBoundingClientRect();
-            if ($distanceFromTop < 200 ) {
+            $distanceFromTop = $this.offset().top;
+            if ( ($scrollTop + $distanc) > $distanceFromTop ) {
                 $this.addClass('animate');
             }
         });
