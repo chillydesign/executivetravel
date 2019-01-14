@@ -413,7 +413,7 @@ section.section.section_important_points {
 
   .bloc {
     position: relative;
-    min-height: 470px;
+    min-height: 570px;
     top: -170px;
     &:last-child {
       margin-bottom: -330px;
@@ -500,4 +500,8 @@ section.section_partners {
   .slick-arrow {
     display: none!important;
   }
+}
+
+section.section_offres {
+  h2 {text-align: center;}
 }
