@@ -1,25 +1,14 @@
-<div id="partner_logos">
-
-	<div style="max-width: 80%; width:80%;margin:auto; padding: 0 30px;position:relative">
-<ul id="partner_slider">
-
-
-<?php
-	$partners = get_sub_field('partners');
-	foreach ( $partners as $post ) :
-			setup_postdata( $post );
-			$partner_link=get_sub_field('link');
-			// $partner_link = get_field('lien');
-			$partner_img = thumbnail_of_post_url($post->ID, 'full');
-			 ?>
-	<li>
-		<?php if ($partner_link !=''): ?><a target="_blank" href="<?php echo $partner_link; ?>"><?php endif; ?>
-		<div class="partenaire_inner" style="background-image:url(<?php echo $partner_img; ?>);"></div>
-			<!-- <img src="<?php echo $partner_img; ?>" alt="<?php the_title(); ?>"><?php the_title(); ?> -->
-		<?php if ($partner_link !=''): ?></a><?php endif; ?>
-	</li>
-<?php endforeach; wp_reset_postdata();?>
+<?php $partners = get_sub_field('partners'); ?>
+<div class="partners_intro">
+  <?php echo get_sub_field('intro'); ?>
+</div>
+<ul class="slickslider_partners">
+    <?php foreach ($partners as $partner): ?>
+        <?php $logo = $partner['logo']; ?>
+        <li>
+            <!-- <a href="#"> -->
+            <div class="slide_image" style="background-image: url('<?php echo $logo; ?>'); background-size:contain;" ></div>
+            <!-- </a> -->
+        </li>
+    <?php endforeach; ?>
 </ul>
-<div class="clear"></div>
-</div>
-</div>

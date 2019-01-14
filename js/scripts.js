@@ -46,6 +46,31 @@
             }]
         });
 
+        $(".slickslider_partners").slick({
+
+                  // normal options...
+                  infinite: true,
+                  autoplay: true,
+                  dots: false,
+                  slidesToShow: 8,
+
+                  // the magic
+                  responsive: [{
+
+                      breakpoint: 992,
+                      settings: {
+                          slidesToShow: 5,
+                      }
+
+                  }, {
+                      breakpoint: 768,
+                      settings: {
+                          slidesToShow: 3
+                      }
+
+                  }]
+              });
+
 
         //Home slider
         $(".homeslider").slick({
@@ -53,6 +78,7 @@
             // normal options...
             infinite: true,
             autoplay: true,
+            controls: false,
             dots: false,
             slidesToShow: 1,
           fade: true
