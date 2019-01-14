@@ -451,6 +451,16 @@ section.section.section_important_points {
     transition: all 0.3s;
     box-shadow: 11px 11px 29px 5px rgba(0,0,0,0.05);
     border-top: 5px solid #56c0d6;
+
+
+        li {
+            background: url('../img/bullet.png') 0 2px no-repeat;
+            background-size: 15px;
+            padding: 0 0 10px 20px;
+        }
+    
+
+
     h3 {
       font-size: 2.1em;
       margin: 0 0 20px;
@@ -484,6 +494,12 @@ section.section.section_important_points .even_bloc .bloc_text {
   position: relative;
   left: 10%;
 }
+
+
+
+
+
+
 
 section.section_partners {
   padding: 0;
