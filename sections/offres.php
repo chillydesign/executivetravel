@@ -6,6 +6,7 @@
 
 <?php if ( $offres_loop -> have_posts() ) : ?>
     <div class="offers">
+        <h2>Offres</h2>
         <ul class="slickslider">
             <?php while ( $offres_loop -> have_posts() ) : $offres_loop -> the_post(); ?>
                 <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' ); ?>
