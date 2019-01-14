@@ -11,7 +11,7 @@
                 <?php while ( $offres_loop -> have_posts() ) : $offres_loop -> the_post(); ?>
                     <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' ); ?>
                     <div class="offre">
-                        <div class="offre_img" style="background-image:url(<?php $image; ?>)">
+                        <div class="offre_img" style="background-image:url(<?php echo $image; ?>)">
                         </div>
                         <h3 ><?php the_title(); ?></h3>
                         <div class="offre_content">
