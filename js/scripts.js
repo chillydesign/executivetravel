@@ -20,6 +20,8 @@
         })
 
 
+
+
         //News slider
         $(".slickslider").slick({
 
@@ -81,6 +83,9 @@
             controls: false,
             dots: false,
             slidesToShow: 1,
+            easing: 'ease-in-out',
+            autoplaySpeed: 4000,
+            speed: 600,
           fade: true
         });
 
@@ -89,37 +94,40 @@
 
 
       	var map_container = $('#agencymap');
-      	map_container.css({
-      		width : '100%'
-      	})
-      	var agencymap = new google.maps.Map(map_container.get(0), {
-      		// center: {lat: latitude , lng: longitude  },
-      		zoom: 14,
-      		scrollwheel: false
-      	});
+        if (map_container.length > 0) {
+        	map_container.css({
+        		width : '100%'
+        	})
+        	var agencymap = new google.maps.Map(map_container.get(0), {
+        		// center: {lat: latitude , lng: longitude  },
+        		zoom: 14,
+        		scrollwheel: false
+        	});
 
-      	var marker, i;
-      	var locations = [[46.2256554,6.1065002, 'Agence Genève Aéroport'], [46.2028587,6.1522949, 'Agence Genève Centre']]
-      	var bounds = new google.maps.LatLngBounds();
-      	var infowindow = new google.maps.InfoWindow({content: '...'});
-      	for (i = 0; i < locations.length; i++) {
-      		var location = locations[i];
-      		var latlng = new google.maps.LatLng(location[0], location[1]),
-      		marker = new google.maps.Marker({
-      			position: latlng,
-      			map: agencymap,
-      			title: location[2]
-      		});
-      		marker.addListener('click', function() {
-      			infowindow.setContent(  this.title);
-      			infowindow.open(agencymap, this);
-      		});
-      		bounds.extend(latlng);
-      	}
+        	var marker, i;
+        	var locations = [[46.2256554,6.1065002, 'Agence Genève Aéroport'], [46.2028587,6.1522949, 'Agence Genève Centre']]
+        	var bounds = new google.maps.LatLngBounds();
+        	var infowindow = new google.maps.InfoWindow({content: '...'});
+        	for (i = 0; i < locations.length; i++) {
+        		var location = locations[i];
+        		var latlng = new google.maps.LatLng(location[0], location[1]),
+        		marker = new google.maps.Marker({
+        			position: latlng,
+        			map: agencymap,
+        			title: location[2]
+        		});
+        		marker.addListener('click', function() {
+        			infowindow.setContent(  this.title);
+        			infowindow.open(agencymap, this);
+        		});
+        		bounds.extend(latlng);
+        	}
 
-      	agencymap.fitBounds(bounds);
+        	agencymap.fitBounds(bounds);
 
-        $('.map_height').matchHeight();
+          $('.map_height').matchHeight();
+
+          }
 
 
 
@@ -131,7 +139,7 @@
     var $windowHeight = $window.height();
     var $docHeight = $(document).height();
 
-    $window.scroll(function() {
+    $window.on('scroll', function() {
         var $scrollTop = $window.scrollTop();
         var $header = $('header');
         var $large_image_link = $('a.large_image_link');
@@ -150,7 +158,7 @@
 
         var $blocs = $('.bloc');
         var $bloc_texts = $('.bloc_text');
-        var $bltxof  = 150 - ($scrollTop / $docHeight * 250) ;
+        var $bltxof  = 70 - ($scrollTop / $docHeight * 200) ;
         $bloc_texts.css({
             'transform' : 'translateY(' +  $bltxof + 'px)'
         });
@@ -169,6 +177,20 @@
     });
 
 
+
+
+    function resizebloc(){
+      $('.bloc').each(function(){
+        var $this = $(this);
+        var $textheight  = $this.find('.bloc_text').outerHeight() + 180;
+        $this.css({'min-height' : $textheight});
+      });
+    }
+    resizebloc();
+
+    $window.on('resize', function() {
+      resizebloc();
+    });
 
 
 

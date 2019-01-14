@@ -408,6 +408,7 @@ section.section.section_large_image_header {
 section.section.section_important_points {
   background: #ececec;
   border-top: solid 80px #ececec;
+  // border-bottom: solid 80px #ececec;
   padding-bottom: 0;
   margin-bottom: 0;
 
@@ -426,6 +427,9 @@ section.section.section_important_points {
     &.animate {
         transform: translateY(0px);
         opacity: 1;
+    }
+    &.marginbloc {
+      margin-bottom: -210px;
     }
   }
 
@@ -458,7 +462,7 @@ section.section.section_important_points {
             background-size: 15px;
             padding: 0 0 10px 20px;
         }
-    
+
 
 
     h3 {
@@ -588,4 +592,12 @@ section.section_offres {
     left: 43px;
 
     }
+}
+section.section_colonnes {
+  h2 {
+    margin-bottom: 25px;
+    &:after {
+      display: none;
+    }
+  }
 }

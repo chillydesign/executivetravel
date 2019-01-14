@@ -20,6 +20,6 @@
             <?php endwhile; ?>
         </ul>
     </div>
-    <h6><a href="#">Toutes nos offres</a></h6>
+    <h6><a href="#">Découvrir toutes nos offres</a></h6>
 <?php endif; ?>
 <?php wp_reset_query(); ?>

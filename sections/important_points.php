@@ -1,8 +1,15 @@
 <div class="container">
 	<div class="row">
+		<?php $count = count(get_sub_field('blocs')); ?>
 		<?php $i=1; ?>
+		<?php $marge = get_sub_field('marge_supplementaire'); ?>
 		<?php while ( have_rows('blocs') ) : the_row(); ?>
-			<div class="bloc <?php if($i % 2 == 0){echo 'even_bloc';} ?>">
+			<?php if($i == $count AND $marge == true){
+				$blocclass="marginbloc";
+			} else {
+				$blocclass="";
+			} ?>
+			<div class="bloc <?php if($i % 2 == 0){echo 'even_bloc';} ?> <?php echo $blocclass; ?>">
 				<div class="bloc_img" style="background-image:url('<?php echo get_sub_field('image')['sizes']['medium']; ?>');"></div>
 				<div class="bloc_text">
 					<h3 <?php if(get_sub_field('icone')) {
