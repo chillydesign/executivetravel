@@ -26,14 +26,23 @@
     <body <?php body_class(); ?>>
 
 
+
+
         <header class="header" id="header">
             <!-- <div class="container"></div> -->
             <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
+            <div id="menu_items">
+            <a href="mailto:contact@e-travel.ch" id="email_button" >Email</a>
+            <a href="#" id="phone_button" >Phone</a>
             <a href="#" id="menu_button" >Menu</a>
-
-
+            </div>
+            <div id="phone_header">
+              <p>voyages d'affaires : +41 (0)22 929 8 929<br>tourisme : +41 (0)22 707 73 10</p>
+            </div>
         </header>
 
         <nav id="navigation_menu" role="navigation">
+          <ul>
             <?php chilly_nav('primary-navigation'); ?>
+            </ul>
         </nav>

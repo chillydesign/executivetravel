@@ -23,7 +23,10 @@ body {
 
 }
 
-
+img{
+  width: 100%;
+  height: auto;
+}
 section {
   padding: 100px 0;
   position: relative;
@@ -600,4 +603,12 @@ section.section_colonnes {
       display: none;
     }
   }
+  h6 a{
+    color: white;
+    background: $light_blue;
+  }
+}
+
+section.section.section_full_width_map {
+    padding: 0;
 }

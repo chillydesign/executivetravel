@@ -3,89 +3,140 @@
 
 
 header#header {
-    height: $header_height;
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    z-index: 300;
-    transition: all 0.3s;
+  height: $header_height;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  transition: all 0.3s;
 }
 
 a.branding {
-    display: block;
-    text-indent: -999999px;
-     background-image: url('../img/logo.svg');
-     background-repeat: no-repeat;
-     background-size: contain;
-     margin: 20px 0;
-     background-position: left center;
-     height: #{$header_height - 40px};
-     width: 300px;
-     position: absolute;
-     left: 30px;
-     top:0;
-     filter: grayscale(1) brightness(0.2) invert(1);
-     transition: all 0.3s;
+  display: block;
+  text-indent: -999999px;
+  background-image: url('../img/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 20px 0;
+  background-position: left center;
+  height: #{$header_height - 40px};
+  width: 300px;
+  position: absolute;
+  left: 30px;
+  top:0;
+  filter: grayscale(1) brightness(0.2) invert(1);
+  transition: all 0.3s;
 }
 
 
- #menu_button {
+#menu_items {
+  display: block;
+  position: absolute;
+  z-index: 320;
+  right: 30px;
+  top:0;
+  a {
+    display: inline-block;
     text-indent: -9999px;
-    background: url('../img/menu.svg') no-repeat right center;
+    background-repeat: no-repeat;
+    background-position:  right center;
     background-size: contain;
-    margin: 20px 0;
+    margin: 20px 0 0 15px;
     height: #{$header_height - 40px};
     width: 30px;
-    display: block;
-    position: absolute;
-    right: 30px;
-    top:0;
     filter: grayscale(1) brightness(0) invert(1);
+  }
+}
 
-
+#menu_button {
+  background: url('../img/menu.svg');
+}
+#phone_button {
+  background: url('../img/phone.svg');
+  width: 25px;
+  margin-right: 8px;
+  margin-left: 22px;
+}
+#email_button {
+  background: url('../img/email.svg');
 }
 
 header#header.bottomheader{
   background: transparentize(white, 0.05);
   // border-bottom: 2px solid white;
-  a.branding, #menu_button {filter: grayscale(0) brightness(1) invert(0);}
+  a.branding, #menu_items a {filter: grayscale(0) brightness(1) invert(0);}
 }
 
 
 $nav_width: 300px;
 nav#navigation_menu {
-    width: $nav_width;
-    background: transparentize($brand_color, 0.1);
-    transform: translateX(#{$nav_width });
-    transition: all 0.3s;
-    position: fixed;
-    top:0;
-    bottom: 0;
-    right:0;
-    height: 100%;
-    height: 100vh;
-    z-index: 20;
+  width: $nav_width;
+  background: transparentize($brand_color, 0.1);
+  transform: translateX(#{$nav_width });
+  transition: all 0.3s;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right:0;
+  height: 100%;
+  height: 100vh;
+  z-index: 120;
 
-    &.menu_visible {
-        transform: translateX(0);
-    }
+  &.menu_visible {
+    transform: translateX(0);
+  }
 
-    ul {
-        padding: #{$header_height + 10px} 0 0;
-        margin: 0;
-        li {
-            display: block;
-            font-size: 1.1em;
-            a {
-                display: block;
-                padding: 15px 20px;
-                font-size: $font_size;
-                color: white;
-                &:hover {
-                    background: transparentize(black, 0.92);
-                }
-            }
+  ul {
+    padding: #{$header_height + 10px} 0 0;
+    margin: 0;
+    li {
+      display: block;
+      font-size: 1.1em;
+      a {
+        display: block;
+        padding: 15px 20px;
+        font-size: $font_size;
+        color: white;
+        &:hover {
+          background: transparentize(black, 0.92);
         }
+      }
     }
+  }
+}
+
+$phone_height: 50px;
+#phone_header {
+  z-index: 310;
+  position: absolute;
+  top: 77px;
+  right: 67px;
+  transition: all 0.3s;
+  background: $font_color;
+  transform: translateY( #{$phone_height * -1} );
+  opacity: 0;
+  padding: 8px 0;
+
+  &:after {
+    content: '';
+    background: $font_color;
+    transform: rotate(45deg);
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: -8px;
+    right: 16px;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  p {
+    padding: 0 20px;
+    margin: 0;
+    color: white;
+  }
 }

@@ -7,9 +7,16 @@
 
 
         var $navigation_menu = $('#navigation_menu');
+        var $phone_header = $('#phone_header');
         var $menu_button = $('#menu_button');
-        $menu_button.on('click', function(){
+        var $phone_button = $('#phone_button');
+        $menu_button.on('click', function(e){
+            e.preventDefault();
             $navigation_menu.toggleClass('menu_visible');
+        });
+        $phone_button.on('click', function(e){
+            e.preventDefault();
+            $phone_header.toggleClass('visible');
         });
 
         // if press escape key, hide menu
@@ -76,17 +83,15 @@
 
         //Home slider
         $(".homeslider").slick({
-
-            // normal options...
             infinite: true,
             autoplay: true,
-            controls: false,
+            arrows: false,
             dots: false,
             slidesToShow: 1,
             easing: 'ease-in-out',
             autoplaySpeed: 4000,
             speed: 1200,
-          fade: true
+            fade: true
         });
 
         var $homesliderheight = $('section.section_large_image_with_links').outerHeight();
