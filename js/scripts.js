@@ -85,7 +85,7 @@
             slidesToShow: 1,
             easing: 'ease-in-out',
             autoplaySpeed: 4000,
-            speed: 600,
+            speed: 1200,
           fade: true
         });
 
