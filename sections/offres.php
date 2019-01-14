@@ -9,7 +9,7 @@
         <div class="offers_slider_container">
             <div id="offers_slider">
                 <?php while ( $offres_loop -> have_posts() ) : $offres_loop -> the_post(); ?>
-                    <?php $image = thumbnail_of_post_url( get_the_I(), 'medium' ); ?>
+                    <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' ); ?>
                     <div class="offre">
                         <div class="offre_img" style="background-image:url(<?php $image; ?>)">
                         </div>
