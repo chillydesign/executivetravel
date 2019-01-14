@@ -409,7 +409,7 @@ section.section.section_important_points {
   background: #ececec;
   border-top: solid 80px #ececec;
   padding-bottom: 0;
-  margin-bottom: 130px;
+  margin-bottom: 0;
 
   .bloc {
     position: relative;
@@ -511,4 +511,65 @@ section.section_offres {
       background: $light_blue;
     }
   }
+}
+
+
+
+
+.section_testimonies {
+      background: #ececec;
+    h2 {
+        text-align: center;
+    }
+}
+
+.testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+}
+
+.testimonial {
+
+    margin: 0;
+    padding: 0;
+    min-width: 50%;
+    width: 50%;
+    flex: 1;
+
+
+
+    blockquote {
+        font-size: 1.6em;
+            line-height: 154%;
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        position: relative;
+
+            box-shadow: 0 5px 6px rgba(0,0,0,0.04);
+
+        &:after {
+            content: '';
+            transform: rotate(45deg);
+            height: 14px;
+            width: 14px;
+            background: white;
+            position: absolute;
+            bottom: -7px;
+            left: 30px;
+        }
+    }
+    cite {
+        font-size: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color:#999;
+        position: relative;
+    top: -6px;
+    left: 43px;
+
+    }
 }
