@@ -19,14 +19,21 @@
             $phone_header.toggleClass('visible');
         });
 
+var $phone_header = $('#phone_header');
 
 $(document).mouseup(function (e) {
-   if (!$navigation_menu.is(e.target) // if the target of the click isn't the container...
-   && $navigation_menu.has(e.target).length === 0) // ... nor a descendant of the container
-   {
-     $navigation_menu.removeClass('menu_visible');
-  }
+  if (!$navigation_menu.is(e.target) // if the target of the click isn't the container...
+  && $navigation_menu.has(e.target).length === 0) // ... nor a descendant of the container
+  {
+    $navigation_menu.removeClass('menu_visible');
+ }
+ if (!$phone_header.is(e.target) // if the target of the click isn't the container...
+ && $phone_header.has(e.target).length === 0) // ... nor a descendant of the container
+ {
+   $phone_header.removeClass('visible');
+}
  });
+
 
 
 
