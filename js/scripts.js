@@ -19,6 +19,18 @@
             $phone_header.toggleClass('visible');
         });
 
+
+$(document).mouseup(function (e) {
+   if (!$navigation_menu.is(e.target) // if the target of the click isn't the container...
+   && $navigation_menu.has(e.target).length === 0) // ... nor a descendant of the container
+   {
+     $navigation_menu.removeClass('menu_visible');
+  }
+ });
+
+
+
+
         // if press escape key, hide menu
         $(document).on('keydown', function(e){
             if(e.keyCode == 27 ){

@@ -4,6 +4,24 @@ footer {
     padding: 50px 0 0;
     margin: 20px 0 0;
 
+    .social_icon{
+      text-indent: -999999px;
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      margin-right: 10px;
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-position: left top;
+      &.fb_footer{
+        background-image: url(../img/facebook.svg);
+      }
+      &.insta_footer{
+        background-image: url(../img/instagram.svg);
+      }
+    }
+
+
 
     form {
         input, input[type="submit"] {
