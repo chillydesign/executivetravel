@@ -20,7 +20,14 @@
         <meta name="description" content="<?php bloginfo('description'); ?>">
 
         <?php wp_head(); ?>
-
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId=2220617461487737';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
     </head>
     <body <?php body_class(); ?>>
@@ -32,7 +39,7 @@
             <!-- <div class="container"></div> -->
             <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
             <div id="menu_items">
-            <a href="mailto:contact@e-travel.ch" id="email_button" >Email</a>
+            <a href="mailto:info@e-travel.ch" id="email_button" >Email</a>
             <a href="#" id="phone_button" >Phone</a>
             <a href="#" id="menu_button" >Menu</a>
             </div>

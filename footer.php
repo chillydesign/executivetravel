@@ -17,6 +17,7 @@
           <a target="_blank" href="
           https://www.facebook.com/executivetravelsa/?__tn__=%2Cd%2CP-R&eid=ARBxt-MXwp6WQzXa20F1xBpmDbwQs0rktKA252qvw22xBOJZmdRrAN7UdpuUT3vHZlyW-GxAi4uKZctj" class="social_icon fb_footer">Facebook</a>
           <a target="_blank"  href="https://www.instagram.com/executive_travel_geneve" class="social_icon insta_footer">Instagram</a>
+          <div class="fb-like" data-href="https://www.facebook.com/executivetravelsa/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true" style="position: relative; top: 14px;"></div>
         </div>
         <div class="col-sm-8">
           <h3>Newsletter</h3>
