@@ -20,6 +20,9 @@
         <meta name="description" content="<?php bloginfo('description'); ?>">
 
         <?php wp_head(); ?>
+    </head>
+    <body <?php body_class(); ?>>
+
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -28,10 +31,6 @@
           js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId=2220617461487737';
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-
-    </head>
-    <body <?php body_class(); ?>>
-
 
 
 
