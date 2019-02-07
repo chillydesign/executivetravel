@@ -17,7 +17,8 @@
                 </div>
                 <?php if ($c == 1): ?>
                 </div> <!-- END OF ROW -->
-            <div class="row">
+
+                <div style="margin-top:50px" class="row">
             <?php endif; ?>
             <?php $c++; endwhile; ?>
         </div> <!-- END OF ROW -->
