@@ -223,19 +223,23 @@ section.section_large_image_with_links {
 }
 
 .grey_back_forlinks{
-  position: relative;
-bottom: -190px;
-background: #ececec;
-padding: 40px 0 70px;
+    position: relative;
+    bottom: -190px;
+    background: #ececec;
+    padding: 40px 0 70px;
 }
 
 .large_image_links {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   // position: relative;
   // top: $large_links_offset;
+
+  @media(min-width:776px){
+  flex-wrap: nowrap;
+  }
 
 }
 .large_image_link {
@@ -243,13 +247,19 @@ padding: 40px 0 70px;
   background: no-repeat center center;
   background-size: cover;
   height: 170px;
-  width: 100%;
+  width: 46%;
   position: relative;
   box-shadow: 0 0 20px transparentize(black, 0.5);
-  margin: 0 5px;
+  margin: 0 2% 20px;
   border-radius: 2px;
   opacity: 0;
   transform: translateY(50px);
+  font-size: 2em;
+
+  @media(min-width:776px){
+      width: 100%;
+      margin: 0 10px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -267,13 +277,25 @@ padding: 40px 0 70px;
     background: transparentize(black, 0.3);
     text-align:center;
   }
+
+  &.showlink {
+      opacity: 0.95;
+      transform: translateY(0);
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+      z-index: 9;
+
+
+      &:nth-child(1) {transition-delay: 0s}
+      &:nth-child(2) {transition-delay: 0.5s}
+      &:nth-child(3) {transition-delay: 1s}
+      &:nth-child(4) {transition-delay: 1.5s}
+      &:nth-child(5) {transition-delay: 2s}
+
+  }
+
 }
 
-a.large_image_link.showlink {opacity: 0.95; transform: translateY(0); transition-duration: 1s; transition-timing-function: ease-in-out; z-index: 9;}
-a.large_image_link.showlink:nth-child(1) {transition-delay: 0s}
-a.large_image_link.showlink:nth-child(2) {transition-delay: 0.5s}
-a.large_image_link.showlink:nth-child(3) {transition-delay: 1s}
-a.large_image_link.showlink:nth-child(4) {transition-delay: 1.5s}
 
 .background_image {
   background: no-repeat center center;
@@ -287,6 +309,9 @@ a.large_image_link.showlink:nth-child(4) {transition-delay: 1.5s}
 }
 // LARGE IMAGE WITH LINKS
 // LARGE IMAGE WITH LINKS
+
+
+
 
 
 

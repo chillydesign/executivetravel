@@ -25,11 +25,11 @@
 </div>
 <div class="grey_back_forlinks">
 <div class="">
-  <div class="large_image_links" style="margin:0 20px;">
+  <div class="large_image_links" >
       <?php foreach($links as $link): ?>
           <?php $page = $link['page']; ?>
           <?php $image = $link['image']; ?>
-          <a class="large_image_link" href="<?php echo $page->guid; ?>" style="background-image: url(<?php echo $image['sizes']['medium']; ?>); margin: 0 10px; height: 300px;" >
+          <a class="large_image_link" href="<?php echo $page->guid; ?>" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);  height: 300px;" >
               <span><?php echo $page->post_title; ?></span>
           </a>
       <?php endforeach; ?>
