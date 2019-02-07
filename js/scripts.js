@@ -4,7 +4,7 @@
 
         'use strict';
 
-        $('.section_colonnes').each(function(){
+        $('.section_colonnes, .section_four_boxes').each(function(){
           var $this = $(this);
           $this.find('.column').matchHeight();
         })
