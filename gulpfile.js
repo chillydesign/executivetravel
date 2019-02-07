@@ -19,7 +19,8 @@ gulp.task('sass', function(done){
     } ))
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer({
-        cascade: false
+        cascade: false,
+        browsers: ['last 3 versions'],
     }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('css'));
@@ -28,16 +29,9 @@ gulp.task('sass', function(done){
 });
 
 
-// gulp.task('watch', function () {
-//     return watch('scss/**/*.scss', { ignoreInitial: false })
-//         .pipe(
-//             gulp.dest('sass')
-//         );
-// });
-
 
 // Run all Gulp tasks and serve application
 gulp.task('default', gulp.series( 'sass'), function() {
-  // gulp.watch('scss/*.scss', ['sass']);
+    // sass function now incldes the watching of files
 
 });
