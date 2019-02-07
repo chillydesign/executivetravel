@@ -777,20 +777,24 @@ section.section_offres {
 
     }
 }
+
+.colonnes_padding {
+  padding: 100px 0;
+
+  &.grey {
+      background: #ececec;
+
+      .column {
+        background: white;
+        padding: 30px;
+      }
+    }
+}
+
+
 section.section_colonnes {
   padding: 0;
-  .colonnes_padding {
-    padding: 100px 0;
 
-    &.grey {
-        background: #ececec;
-
-        .column {
-          background: white;
-          padding: 30px;
-        }
-      }
-  }
 
 
   li {
