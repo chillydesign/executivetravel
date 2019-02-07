@@ -53,3 +53,5 @@
             <?php chilly_nav('primary-navigation'); ?>
             </ul>
         </nav>
+
+    <div id="rest_of_page">

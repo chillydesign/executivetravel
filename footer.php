@@ -44,7 +44,7 @@
 </footer>
 <!-- /footer -->
 
-
+</div><!-- END OF rest_of_page -->
 
 <?php wp_footer(); ?>
 <?php $tdu = get_template_directory_uri(); ?>

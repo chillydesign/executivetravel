@@ -15,39 +15,30 @@
         var $phone_button = $('#phone_button');
         $menu_button.on('click', function(e){
             e.preventDefault();
-            $navigation_menu.addClass('menu_visible');
+            $navigation_menu.toggleClass('menu_visible');
+            $phone_header.removeClass('visible');
         });
         $phone_button.on('click', function(e){
             e.preventDefault();
             $phone_header.toggleClass('visible');
         });
 
-var $phone_header = $('#phone_header');
 
-$(document).mouseup(function (e) {
-  if (!$navigation_menu.is(e.target) // if the target of the click isn't the container...
-  && $navigation_menu.has(e.target).length === 0 // ... nor a descendant of the container
-  || $menu_button.is(e.target) ) // or if the target is the menu button
-  {
-    $navigation_menu.removeClass('menu_visible');
- }
- if (!$phone_header.is(e.target) // if the target of the click isn't the container...
- && $phone_header.has(e.target).length === 0) // ... nor a descendant of the container
- {
-   $phone_header.removeClass('visible');
-}
- });
+var $restofpage = $('#rest_of_page');
+$restofpage.on('click', function(e){
+     $navigation_menu.removeClass('menu_visible');
+     $phone_header.removeClass('visible');
+});
 
 
+// if press escape key, hide menu
+$(document).on('keydown', function(e){
+    if(e.keyCode == 27 ){
+        $navigation_menu.removeClass('menu_visible');
+        $phone_header.removeClass('visible');
+    }
+})
 
-
-
-        // if press escape key, hide menu
-        $(document).on('keydown', function(e){
-            if(e.keyCode == 27 ){
-                $navigation_menu.removeClass('menu_visible');
-            }
-        })
 
 
 
