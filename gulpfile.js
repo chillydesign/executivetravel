@@ -14,13 +14,13 @@ gulp.task('heya', function(done) {
 
 gulp.task('sass', function(done){
   return gulp.src('scss/global.scss')
-    .pipe(watch('scss/*.scss' , function(){
-        console.log('Made CSS File');
-    } ))
+    // .pipe(watch('scss/*.scss' , function(){
+    //     console.log('Made CSS File');
+    // } ))
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer({
         cascade: false,
-        browsers: ['last 3 versions'],
+        browsers: ['last 2 versions'],
     }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('css'));
@@ -28,10 +28,14 @@ gulp.task('sass', function(done){
 
 });
 
+gulp.task('watch', function () {
+    watch('scss/*.scss',  gulp.series( 'sass' ));
+});
+
 
 
 // Run all Gulp tasks and serve application
-gulp.task('default', gulp.series( 'sass'), function() {
+gulp.task('default', gulp.series( 'sass', 'watch'), function() {
     // sass function now incldes the watching of files
 
 });
