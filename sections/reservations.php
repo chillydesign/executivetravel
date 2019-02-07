@@ -10,11 +10,11 @@
 
 
 <ul class="reservation_things">
-    <li class="plane"><a href="#"><span></span>Vols</a></li>
-    <li class="sun"><a href="#"><span></span>Séjours</a></li>
-    <li class="bed"><a href="#"><span></span>Hotels</a></li>
-    <li class="house"><a href="#"><span></span>Appartements</a></li>
-    <li class="car"><a href="#"><span></span>Location de voiture</a></li>
+    <li class="plane"><a href="#"><span></span><em>Vols</em></a></li>
+    <li class="sun"><a href="#"><span></span><em>Séjours</em></a></li>
+    <li class="bed"><a href="#"><span></span><em>Hotels</em></a></li>
+    <li class="house"><a href="#"><span></span><em>Appartements</em></a></li>
+    <li class="car"><a href="#"><span></span><em>Location de voiture</em></a></li>
 </ul>
 
 

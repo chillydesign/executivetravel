@@ -118,17 +118,29 @@ ul.reservation_things {
   display: flex;
   flex-wrap: wrap;
   max-width: 67%;
-  margin: 50px 0 130px;
+  margin: 50px auto 130px;
+
+  @media(min-width: $mobile_width ){
+    margin-left: 0;
+    margin-right:  0;
+  }
+
+
   li {
-    width: 40%;
-    margin: 0 10% 25px 0;
-    display: inline-block;
+    margin: 0 0 25px 0;
+    display: block;
+    width: 100%;
+    @media(min-width: $mobile_width ){
+        width: 40%;
+        margin: 0 10% 25px 0;
+        display: inline-block;
+    }
     a {
-      display: block;
-      font-weight: bold;
+      display: flex;
+
       color: inherit;
       height: $res_height;
-      line-height: $res_height;
+      // line-height: $res_height;
       padding: 0 20px 0 #{$res_height + 20px};
       background: white;
       box-shadow: 0 5px 10px transparentize(black, 0.8);
@@ -136,6 +148,17 @@ ul.reservation_things {
       border-radius: 5px;
       position: relative;
       opacity: 0.95;
+
+      em {
+          font-style: normal;
+         font-weight: bold;
+         flex: 1;
+         align-self: center;
+      }
+
+      @media(min-width: $mobile_width ){
+
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -237,8 +260,9 @@ section.section_large_image_with_links {
   // position: relative;
   // top: $large_links_offset;
 
-  @media(min-width:776px){
-  flex-wrap: nowrap;
+
+  @media(min-width: $mobile_width ){
+      flex-wrap: nowrap;
   }
 
 }
@@ -256,7 +280,7 @@ section.section_large_image_with_links {
   transform: translateY(50px);
   font-size: 2em;
 
-  @media(min-width:776px){
+  @media(min-width: $mobile_width ){
       width: 100%;
       margin: 0 10px;
   }
@@ -634,7 +658,7 @@ section.section.section_important_points {
 }
 
 
-@media(min-width:776px){
+  @media(min-width: $mobile_width ){
 
   section.section.section_important_points .bloc_img {
     width: 55%;
