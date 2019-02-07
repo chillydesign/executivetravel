@@ -778,24 +778,24 @@ section.section_offres {
     }
 }
 
-.colonnes_padding {
-  padding: 100px 0;
-
-  &.grey {
-      background: #ececec;
-
-      .column {
-        background: white;
-        padding: 30px;
-      }
-    }
-}
 
 
-section.section_colonnes {
+
+section.section_colonnes, section.section_four_boxes {
   padding: 0;
 
+  .colonnes_padding {
+    padding: 100px 0;
 
+    &.grey {
+        background: #ececec;
+
+        .column {
+          background: white;
+          padding: 30px;
+        }
+      }
+  }
 
   li {
       background: url('../img/bullet.png') 0 2px no-repeat;
