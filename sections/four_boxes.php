@@ -15,7 +15,7 @@
                         <?php echo get_sub_field('content'); ?>
                     </div>
                 </div>
-                <?php if ($c == 2): ?>
+                <?php if ($c == 1): ?>
                 </div> <!-- END OF ROW -->
             <div class="row">
             <?php endif; ?>
