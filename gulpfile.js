@@ -14,13 +14,10 @@ gulp.task('heya', function(done) {
 
 gulp.task('sass', function(done){
   return gulp.src('scss/global.scss')
-    // .pipe(watch('scss/*.scss' , function(){
-    //     console.log('Made CSS File');
-    // } ))
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer({
         cascade: false,
-        browsers: ['last 2 versions'],
+        browsers: ['last 3 versions'],
     }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('css'));

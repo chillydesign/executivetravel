@@ -7,3 +7,4 @@ package-lock.json
 .ftpignore
 id_rsa
 .git
+/.vscode
