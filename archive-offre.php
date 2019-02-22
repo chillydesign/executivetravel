@@ -18,11 +18,14 @@
         <div class="container">
             <?php if (have_posts()): $i = 0; while (have_posts()) : the_post(); ?>
                 <?php $even_block = ($i % 2 == 0) ? 'even_bloc' : ''; ?>
+                <?php $permalink = get_the_permalink(); ?>
                 <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' );  ?>
                 <div class="bloc  more_margin <?php echo $even_block; ?> ">
-                    <div class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></div>
+
+                    <a href="<?php echo $permalink; ?>" class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></a>
+
                     <div class="bloc_text" >
-                        <h3> <?php the_title(); ?> </h3>
+                        <h3> <a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h3>
                         <div><p><?php echo get_the_excerpt(); ?></p></div>
                     </div>
                 </div>
