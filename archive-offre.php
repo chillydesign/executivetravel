@@ -14,12 +14,12 @@
             <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' );  ?>
             <div class="bloc <?php echo $even_block; ?> ">
                 <div class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></div>
-				<div class="bloc_text">
-					<h3> <?php the_title(); ?> </h3>
-				<div><?php echo get_the_excerpt(); ?></div>
-			</div>
-		</div>
-        <?php $i++; endwhile; endif; ?>
+                <div class="bloc_text">
+                    <h3> <?php the_title(); ?> </h3>
+                    <div><?php echo get_the_excerpt(); ?></div>
+                </div>
+            </div>
+            <?php $i++; endwhile; endif; ?>
 
 
 
