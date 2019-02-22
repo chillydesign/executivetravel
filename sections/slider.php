@@ -7,7 +7,7 @@
 <ul class="slickslider_img">
     <?php foreach ($images as $image): ?>
         <li>
-            <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['title']; ?>" />
+            <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['title']; ?>" />
         </li>
     <?php endforeach; ?>
 </ul>
