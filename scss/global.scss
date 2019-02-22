@@ -322,7 +322,7 @@ section.section_large_image_with_links {
 
 
 .background_image {
-  background: no-repeat center center;
+  background: no-repeat center top;
   background-size: cover;
   position: absolute;
   top:0;
@@ -788,7 +788,9 @@ section.section_colonnes, section.section_four_boxes {
     padding: 100px 0;
 
     &.grey {
-        background: #ececec;
+        background-color: #ececec;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         .column {
           background: white;
