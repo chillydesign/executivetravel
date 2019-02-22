@@ -840,7 +840,13 @@ section.section.section_full_width_map {
     background-repeat: no-repeat ;
     background-position: center center;
     background-size: cover;
-    height: 500px;
-    
+    min-height: 500px;
+    color: white;
+    text-shadow:  0 1px 12px black;
+    margin-bottom: -20px;
+
+    h1 {
+        padding-top:  50px;
+    }
 
 } // end of 404 page
