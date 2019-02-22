@@ -16,7 +16,7 @@
                 <div class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></div>
                 <div class="bloc_text">
                     <h3> <?php the_title(); ?> </h3>
-                    <div><?php echo get_the_excerpt(); ?></div>
+                    <div><p><?php echo get_the_excerpt(); ?></p></div>
                 </div>
             </div>
             <?php $i++; endwhile; endif; ?>
