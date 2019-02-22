@@ -108,6 +108,22 @@ $(document).on('keydown', function(e){
             fade: true
         });
 
+
+        //Home slider
+        $(".slickslider_img").slick({
+            infinite: true,
+            autoplay: true,
+            arrows: true,
+            dots: false,
+            // slidesToShow: 1,
+            easing: 'ease-in-out',
+            autoplaySpeed: 4000,
+            speed: 1200,
+            fade: true
+        });
+
+
+
         var $homesliderheight = $('section.section_large_image_with_links').outerHeight();
         $('.homeslider li div.slide_image').css({'height' : $homesliderheight});
 

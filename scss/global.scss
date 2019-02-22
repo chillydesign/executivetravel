@@ -341,7 +341,7 @@ section.section_large_image_with_links {
 
 // SLICKSLIDE
 // SLICKSLIDE
-ul.slickslider, ul.homeslider, ul.slickslider_partners {
+ul.slickslider, ul.homeslider, ul.slickslider_partners, ul.slickslider_img {
   margin: 0;
   padding: 0;
   li {
@@ -356,6 +356,11 @@ ul.slickslider, ul.homeslider, ul.slickslider_partners {
       height: 300px;
       width: 100%;
     }
+  }
+
+  img {
+      height: 300px;
+      width: auto
   }
   p {
     position: absolute;
