@@ -14,7 +14,7 @@
             <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' );  ?>
             <div class="bloc <?php echo $even_block; ?> ">
                 <div class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></div>
-                <div class="bloc_text">
+                <div class="bloc_text" style="min-height: 500px">
                     <h3> <?php the_title(); ?> </h3>
                     <div><p><?php echo get_the_excerpt(); ?></p></div>
                 </div>
