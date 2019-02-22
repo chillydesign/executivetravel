@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 
-
-<?php $background_image = thumbnail_of_post_url( get_the_ID(), 'medium' );  ?>
+<?php $home_id = get_option( 'page_on_front' ); ?>
+<?php $background_image = thumbnail_of_post_url( $home_id, 'large' );  ?>
 <h1>
     <div class="container">
         <?php _e( 'Offres', 'webfactor' ); ?>
     </div>
 </h1>
-<div class="background_image" style="background-image: url(<?php echo $background_image['sizes']['large']; ?>);">
+<div class="background_image" style="background-image: url(<?php echo $background_image; ?>);">
 
 
     <div class="container">
