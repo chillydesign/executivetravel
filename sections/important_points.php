@@ -4,17 +4,17 @@
 		<?php $i=1; ?>
 		<?php $marge = get_sub_field('marge_supplementaire'); ?>
 		<?php while ( have_rows('blocs') ) : the_row(); ?>
-			<?php if($i == $count AND $marge == true){
-				$blocclass="marginbloc";
-			} else {
-				$blocclass="";
-			} ?>
-			<div class="bloc <?php if($i % 2 == 0){echo 'even_bloc';} ?> <?php echo $blocclass; ?>">
-				<div class="bloc_img" style="background-image:url('<?php echo get_sub_field('image')['sizes']['medium']; ?>');"></div>
+			<?php $blocclass = ($i == $count && $marge == true) ?  "marginbloc" : ""; ?>
+            <?php $image = get_sub_field('image')['sizes']['medium']; ?>
+            <?php $even_block = ($i % 2 == 0) ? 'even_bloc' : ''; ?>
+            <?php $icone = get_sub_field('icone'); ?>
+			<div class="bloc <?php echo $even_block . ' ' . $blocclass; ?>">
+
+				<div class="bloc_img" style="background-image:url('<?php echo $image; ?>');"></div>
 				<div class="bloc_text">
-					<h3 <?php if(get_sub_field('icone')) {
+					<h3 <?php if( $icone) {
 						echo 'class="icon_title" ';
-						$bg = "url('" . get_sub_field('icone')['sizes']['small'] . "');";
+						$bg = "url('" . $icone['sizes']['small'] . "');";
 						echo 'style="background-image:' . $bg . '"';
 					}?>>
 					<?php echo get_sub_field('titre'); ?>
