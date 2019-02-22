@@ -13,8 +13,6 @@
         <meta name="msapplication-TileColor" content="#5bc0d5">
         <meta name="theme-color" content="#5bc0d5">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">
-
-
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<?php bloginfo('description'); ?>">
