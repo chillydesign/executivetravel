@@ -119,7 +119,7 @@ $(document).on('keydown', function(e){
             easing: 'ease-in-out',
             autoplaySpeed: 4000,
             speed: 1200,
-            fade: true
+             centerMode: true,
         });
 
 
