@@ -120,6 +120,7 @@ $(document).on('keydown', function(e){
             autoplaySpeed: 4000,
             speed: 1200,
              centerMode: true,
+             variableWidth: true
         });
 
 
