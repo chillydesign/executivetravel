@@ -105,14 +105,14 @@ function webfactor_header_scripts()
         wp_register_script('modernizr', $tdu . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('maps', '//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array() );
+        wp_register_script('maps', '//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array(), 1, true );
         wp_enqueue_script('maps'); // Enqueue it!
 
-        wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(),  wf_version() );
+        wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(),  wf_version(), true );
         wp_enqueue_script('slick'); // Enqueue it!
-        wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version() );
+        wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version(), true );
         wp_enqueue_script('matchHeight'); // Enqueue it!
-        wp_register_script('scripts', $tdu . '/js/scripts.js', array('jquery'),  wf_version() );
+        wp_register_script('scripts', $tdu . '/js/scripts.js', array('jquery'),  wf_version(), true );
         wp_enqueue_script('scripts'); // Enqueue it!
 
 
