@@ -9,7 +9,7 @@
 
 
         <section>
-            <?php get_template_part('sections', 'offres'); ?>
+            <?php get_template_part('sections/offres'); ?>
         </section>
 
 
