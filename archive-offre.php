@@ -1,19 +1,25 @@
 <?php get_header(); ?>
 
 
-		<!-- section -->
-		<section>
-
-			<h1><?php _e( 'Offres', 'webfactor' ); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
+<div class="container">
 
 
-<?php get_sidebar(); ?>
+
+        <h1><?php _e( 'Offres', 'webfactor' ); ?></h1>
+
+
+        <section>
+            <?php get_template_part('sections', 'offres'); ?>
+        </section>
+
+
+        <?php get_template_part('loop'); ?>
+
+        <?php get_template_part('pagination'); ?>
+
+
+</div> 	<!-- end .container -->
+
+
 
 <?php get_footer(); ?>
