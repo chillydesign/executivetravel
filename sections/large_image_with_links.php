@@ -24,7 +24,7 @@
   </ul>
 </div>
 <div class="grey_back_forlinks">
-<div class="">
+
   <div class="large_image_links" >
       <?php foreach($links as $link): ?>
           <?php $page = $link['page']; ?>
@@ -34,5 +34,5 @@
           </a>
       <?php endforeach; ?>
   </div>
-</div>
+
 </div>

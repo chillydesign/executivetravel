@@ -248,8 +248,8 @@ section.section_large_image_with_links {
 .grey_back_forlinks{
     position: relative;
     bottom: -190px;
-    background: #ececec;
-    padding: 40px 0 70px;
+    background: white;
+    padding: 40px 20px 70px;
 }
 
 .large_image_links {
@@ -675,7 +675,7 @@ section.section.section_important_points {
   }
   section.section.section_important_points .bloc_text {
     width: 45%;
-    right: -5%;
+    right: 5%;
     top: 40px;
     position: absolute;
   }
@@ -686,7 +686,7 @@ section.section.section_important_points {
 
   section.section.section_important_points .even_bloc .bloc_text {
     position: relative;
-    left: -5%;
+    left: 5%;
   }
 
 
