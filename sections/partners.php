@@ -1,16 +1,19 @@
 <?php
 
+
 $part_args = array(
     'posts_per_page' => -1,
     'post_type' => 'partenaire'
-)
+);
 
- $partners =  get_posts($part_args);  ?>
+$partners =  get_posts($part_args);
+$intro = get_sub_field('intro');
+?>
 <div class="partners_intro">
-  <?php echo get_sub_field('intro'); ?>
+    <?php echo $intro; ?>
 </div>
 <ul class="slickslider_partners">
-
+    
     <?php foreach ( $partners as $post ) : setup_postdata( $post ); ?>
         <?php $logo = get_post_thumbnail_id( get_the_ID(), 'medium' ); ?>
         <li>
