@@ -1,4 +1,5 @@
 <!-- footer -->
+<?php $tdu = get_template_directory_uri(); ?>
 <footer class="footer" role="contentinfo">
   <div class="footer_top">
     <div class="container">
@@ -28,6 +29,10 @@
             <input type="text" id="email" name="email" placeholder="Adresse email" />
             <input type="submit" id="submit_form" name="submit_form" value="S’inscrire" />
           </form>
+
+          <div id="garantie_suisse">
+              <img src="<?php echo $tdu; ?>/img/logo_garantie_suisse.jpg" alt="logo fond de garantie suisse" />
+          </div>
 
         </div>
       </div>
