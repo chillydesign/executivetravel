@@ -20,7 +20,7 @@ a.branding {
   background-size: contain;
   margin: 20px 0;
   background-position: left center;
-  height: #{$header_height - 15px};
+  height:  95px;
   width: 300px;
   position: absolute;
   left: 30px;
@@ -66,7 +66,7 @@ header#header.bottomheader{
   background: transparentize($dark_blue, 0.05);
   // border-bottom: 2px solid white;
   // a.branding, #menu_items a {filter: grayscale(0) brightness(1) invert(0);}
-  a.branding {filter: grayscale(0) brightness(1) invert(0);}
+  a.branding {filter: grayscale(0) brightness(1) invert(0);   height: #{$header_height - 15px}; }
 }
 
 
