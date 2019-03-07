@@ -11,8 +11,8 @@
             <a href="mailto:business@e-travel.ch">business@e-travel.ch</a>
           </p>
 
-          <p>Voyages d’agrément br
-            +41 (0)22 707 73 10 br
+          <p>Voyages d’agrément  <br>
+            +41 (0)22 707 73 10  <br>
             <a href="mailto:info@e-travel.ch">info@e-travel.ch</a>
           </p>
           <a target="_blank" href="
