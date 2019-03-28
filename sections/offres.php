@@ -20,6 +20,8 @@
             <?php endwhile; ?>
         </ul>
     </div>
-    <h6><a href="#">Découvrir toutes nos offres</a></h6>
+
+    <?php $offres_link = get_home_url() . '/offre'; ?>
+    <h6><a href="<?php echo $offres_link; ?>">Découvrir toutes nos offres</a></h6>
 <?php endif; ?>
 <?php wp_reset_query(); ?>

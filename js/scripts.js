@@ -108,6 +108,23 @@ $(document).on('keydown', function(e){
             fade: true
         });
 
+
+        //Home slider
+        $(".slickslider_img").slick({
+            infinite: true,
+            autoplay: true,
+            arrows: true,
+            dots: false,
+            // slidesToShow: 1,
+            easing: 'ease-in-out',
+            autoplaySpeed: 4000,
+            speed: 1200,
+             centerMode: true,
+             variableWidth: true
+        });
+
+
+
         var $homesliderheight = $('section.section_large_image_with_links').outerHeight();
         $('.homeslider li div.slide_image').css({'height' : $homesliderheight});
 
@@ -157,14 +174,28 @@ $(document).on('keydown', function(e){
     var $window = $(window);
     var $windowHeight = $window.height();
     var $docHeight = $(document).height();
+    var $header = $('header');
+    var $large_image_link = $('a.large_image_link');
+
+    function makeLargeImagesVisible($scrollTop) {
+        if ($large_image_link.length > 0) {
+            var $first = $large_image_link[0];
+            $offset = $first.offsetParent.offsetTop -  $window.height();
+            if ( $scrollTop > $offset && !$large_image_link.hasClass("showlink")) {
+                $large_image_link.addClass('showlink');
+            }
+        }
+    }
+
+    var $scrollTop = $window.scrollTop();
+    makeLargeImagesVisible($scrollTop);
 
     $window.on('scroll', function() {
+
         var $scrollTop = $window.scrollTop();
-        var $header = $('header');
-        var $large_image_link = $('a.large_image_link');
-        if ( $scrollTop > 30 && !$large_image_link.hasClass("showlink")) {
-            $large_image_link.addClass('showlink');
-        }
+
+        makeLargeImagesVisible($scrollTop);
+
 
         $topbitheight = $('.section_large_image_with_links').outerHeight();
         if ( $scrollTop  > $topbitheight) {

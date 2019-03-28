@@ -1,4 +1,5 @@
 <!-- footer -->
+<?php $tdu = get_template_directory_uri(); ?>
 <footer class="footer" role="contentinfo">
   <div class="footer_top">
     <div class="container">
@@ -26,6 +27,10 @@
             echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));
           ?>
 
+          <div id="garantie_suisse">
+              <img src="<?php echo $tdu; ?>/img/logo_garantie_suisse.jpg" alt="logo fond de garantie suisse" />
+          </div>
+
         </div>
       </div>
     </div>
@@ -44,11 +49,7 @@
 </div><!-- END OF rest_of_page -->
 
 <?php wp_footer(); ?>
-<?php $tdu = get_template_directory_uri(); ?>
-<script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU'></script>
-<script type="text/javascript" src="<?php echo $tdu; ?>/js/min/slick.min.js"></script>
-<script type="text/javascript" src="<?php echo $tdu; ?>/js/min/jquery.matchHeight.js"></script>
-<script type="text/javascript" src="<?php echo $tdu; ?>/js/scripts.js?v=<?php echo wf_version(); ?>"></script>
+
 
 <script>
 // (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

@@ -248,8 +248,8 @@ section.section_large_image_with_links {
 .grey_back_forlinks{
     position: relative;
     bottom: -190px;
-    background: #ececec;
-    padding: 40px 0 70px;
+    background: white;
+    padding: 40px 20px 70px;
 }
 
 .large_image_links {
@@ -341,7 +341,7 @@ section.section_large_image_with_links {
 
 // SLICKSLIDE
 // SLICKSLIDE
-ul.slickslider, ul.homeslider, ul.slickslider_partners {
+ul.slickslider, ul.homeslider, ul.slickslider_partners, ul.slickslider_img {
   margin: 0;
   padding: 0;
   li {
@@ -356,6 +356,11 @@ ul.slickslider, ul.homeslider, ul.slickslider_partners {
       height: 300px;
       width: 100%;
     }
+  }
+
+  img {
+      height: 300px;
+      width: auto
   }
   p {
     position: absolute;
@@ -599,9 +604,14 @@ section.section.section_important_points {
     &.marginbloc {
       margin-bottom: -210px;
     }
+
+    &.more_margin {
+        margin-bottom: 130px;
+    }
   }
 
   .bloc_img {
+      display: inline-block;
     min-height: 320px;
     padding: 17%;
     width: 100%;
@@ -665,7 +675,7 @@ section.section.section_important_points {
   }
   section.section.section_important_points .bloc_text {
     width: 45%;
-    right: -5%;
+    right: 5%;
     top: 40px;
     position: absolute;
   }
@@ -676,7 +686,7 @@ section.section.section_important_points {
 
   section.section.section_important_points .even_bloc .bloc_text {
     position: relative;
-    left: -5%;
+    left: 5%;
   }
 
 
@@ -823,3 +833,21 @@ section.section_colonnes .colonnes_padding.nomargin{
 section.section.section_full_width_map {
     padding: 0;
 }
+
+
+
+
+#post-404 {
+    background-repeat: no-repeat ;
+    background-position: center center;
+    background-size: cover;
+    min-height: 500px;
+    color: white;
+    text-shadow:  0 1px 12px black;
+    margin-bottom: -20px;
+
+    h1 {
+        padding-top:  50px;
+    }
+
+} // end of 404 page

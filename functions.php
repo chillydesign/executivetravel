@@ -88,7 +88,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.0.7.2';
+  return '0.1.1';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -96,11 +96,27 @@ function webfactor_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    //    wp_deregister_script('jquery');
 
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        $tdu = get_template_directory_uri();
+
+    //    wp_deregister_script('jquery');
         wp_enqueue_script('jquery'); // Enqueue it!
+
+        wp_register_script('modernizr', $tdu . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
+
+        wp_register_script('maps', '//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU', array(), 1, true );
+        wp_enqueue_script('maps'); // Enqueue it!
+
+        wp_register_script('slick', $tdu . '/js/min/slick.min.js', array(),  wf_version(), true );
+        wp_enqueue_script('slick'); // Enqueue it!
+        wp_register_script('matchHeight', $tdu . '/js/min/jquery.matchHeight.js', array('jquery'),  wf_version(), true );
+        wp_enqueue_script('matchHeight'); // Enqueue it!
+        wp_register_script('scripts', $tdu . '/js/scripts.js', array('jquery'),  wf_version(), true );
+        wp_enqueue_script('scripts'); // Enqueue it!
+
+
+
 
     }
 }
@@ -108,10 +124,10 @@ function webfactor_header_scripts()
 // Load HTML5 Blank conditional scripts
 function webfactor_conditional_scripts()
 {
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
+    // if (is_page('pagenamehere')) {
+    //     wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    //     wp_enqueue_script('scriptname'); // Enqueue it!
+    // }
 }
 
 // Load HTML5 Blank styles
@@ -461,6 +477,39 @@ function create_custom_post_types(){
               'offre_cat'
             ) // Add Category and Post Tags support
         ));
+
+
+
+
+        register_post_type('partenaire', // Register Custom Post Type
+            array(
+                'labels' => array(
+                    'name' => __('Partenaires', 'html5blank'), // Rename these to suit
+                    'singular_name' => __('Partenaire', 'html5blank'),
+                    'add_new' => __('Ajouter', 'html5blank'),
+                    'add_new_item' => __('Ajouter une partenaire', 'html5blank'),
+                    'edit' => __('Modifier', 'html5blank'),
+                    'edit_item' => __('Modifier l\'partenaire', 'html5blank'),
+                    'new_item' => __('Nouvelle partenaire', 'html5blank'),
+                    'view' => __('Afficher l\'partenaire ', 'html5blank'),
+                    'view_item' => __('Afficher l\'partenaire', 'html5blank'),
+                    'search_items' => __('Chercher une partenaire', 'html5blank'),
+                    'not_found' => __('Aucune partenaire trouvée', 'html5blank'),
+                    'not_found_in_trash' => __('Aucune partenaire trouvée dans la corbeille', 'html5blank')
+                ),
+                'public' => true,
+                'exclude_from_search' => false,
+                'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+                'has_archive' => true,
+                'menu_icon' => 'dashicons-groups',
+                'supports' => array(
+                    'title',
+                    'thumbnail'
+                ), // Go to Dashboard Custom HTML5 Blank post for supports
+                'can_export' => true, // Allows export in Tools > Export
+                'taxonomies' => array(
+                ) // Add Category and Post Tags support
+            ));
 
 
 }
