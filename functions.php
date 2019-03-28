@@ -88,7 +88,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.0.6';
+  return '0.0.7.2';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -453,6 +453,7 @@ function create_custom_post_types(){
             'supports' => array(
                 'title',
                 'thumbnail',
+                'excerpt',
                 'editor'
             ), // Go to Dashboard Custom HTML5 Blank post for supports
             'can_export' => true, // Allows export in Tools > Export

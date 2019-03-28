@@ -10,8 +10,8 @@
             <a href="mailto:business@e-travel.ch">business@e-travel.ch</a>
           </p>
 
-          <p>Voyages d’agrément br
-            +41 (0)22 707 73 10 br
+          <p>Voyages d’agrément <br>
+            +41 (0)22 707 73 10 <br>
             <a href="mailto:info@e-travel.ch">info@e-travel.ch</a>
           </p>
           <a target="_blank" href="
@@ -22,12 +22,9 @@
         <div class="col-sm-8">
           <h3>Newsletter</h3>
           <p>Pour être tenu au courant de nos promotions et actualités vous pouvez vous inscrire à notre newsletter ici </p>
-          <form action="" method="post">
-            <input type="text" id="first_name" name="first_name" placeholder="Prénom" />
-            <input type="text" id="last_name" name="last_name" placeholder="Nom" />
-            <input type="text" id="email" name="email" placeholder="Adresse email" />
-            <input type="submit" id="submit_form" name="submit_form" value="S’inscrire" />
-          </form>
+          <?php $form_widget = new \MailPoet\Form\Widget();
+            echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));
+          ?>
 
         </div>
       </div>
