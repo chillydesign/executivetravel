@@ -883,13 +883,20 @@ span.wpcf7-list-item {
     h3 {
         margin: 30px 0 10px;
     }
+
+
     input , textarea {
         border: 1px solid $light_grey;
         margin: 0;
 
-        &.wpcf7-validates-as-required {
+        &.wpcf7-not-valid {
             border-color: $red;
         }
+
+        .wpcf7-submit {
+            margin-top: 20px;
+        }
+        
 
         &:focus {
             border-color: $light_blue;
