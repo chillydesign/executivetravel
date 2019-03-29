@@ -69,6 +69,7 @@ a.button, h6 a , a h6, input[type="submit"] {
     color: white;
     margin:  20px 0;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:visited, &:link, &:active {
         color: white;
@@ -121,13 +122,16 @@ tr {
 
 
 form {
+    input, textarea, button {
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        margin: 0 0 10px;
+        font-size: $font_size;
+        font-family: $font_stack;
+    }
 
-}
-input, textarea, button {
-    width: 100%;
-    border: 0;
-    padding: 10px;
-    margin: 0 0 10px;
-    font-size: $font_size;
-    font-family: $font_stack;
+    input[type="submit"], button {
+        background: $light_blue;
+    }
 }

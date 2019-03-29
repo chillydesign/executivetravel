@@ -851,3 +851,20 @@ section.section.section_full_width_map {
     }
 
 } // end of 404 page
+
+
+
+
+
+// CONTACT FORM 7
+form.wpcf7-form {
+    input {
+        border: 1px solid $light_grey;
+
+        &:focus {
+            border-color: $light_blue;
+        }
+    }
+}
+
+// CONTACT FORM 7
