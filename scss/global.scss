@@ -858,6 +858,20 @@ section.section.section_full_width_map {
 
 // CONTACT FORM 7
 form.wpcf7-form {
+    max-width: 600px;
+    
+    label {
+        margin: 5px 0 0;
+            display: block
+    }
+
+    p {
+        padding: 0;
+    }
+
+    h3 {
+        margin: 30px 0 10px;
+    }
     input {
         border: 1px solid $light_grey;
 
