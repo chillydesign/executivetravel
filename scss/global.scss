@@ -893,10 +893,10 @@ span.wpcf7-list-item {
             border-color: $red;
         }
 
-        .wpcf7-submit {
+        &.wpcf7-submit {
             margin-top: 20px;
         }
-        
+
 
         &:focus {
             border-color: $light_blue;
