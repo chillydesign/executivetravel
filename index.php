@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-<div class="container">
-		<!-- section -->
-		<section>
 
-			<h1><?php _e( 'L\'Actualité FPMA', 'webfactor' ); ?></h1>
+<!-- section -->
+<section class="section  section_colonnes">
+    <div class="grey colonnes_padding">
+        <div class="container">
 
-			<?php get_template_part('loop'); ?>
+            <h1><?php _e( 'News', 'webfactor' ); ?></h1>
 
-			<?php get_template_part('pagination'); ?>
 
-		</section>
-		<!-- /section -->
+            <?php get_template_part('loop'); ?>
 
-</div>
+            <?php get_template_part('pagination'); ?>
+        </div>
+    </div>
+</section>
+<!-- /section -->
+
+
 
 
 
