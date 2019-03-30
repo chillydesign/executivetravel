@@ -14,7 +14,7 @@
                     <?php the_title(); ?>
                 </div>
             </h1>
-            <?php $image = (has_post_thumbnail()) ? thumbnail_of_post_url(the_ID(), 'large') : ''; ?>
+            <?php $image = (has_post_thumbnail()) ? thumbnail_of_post_url( get_the_ID(), 'large') : ''; ?>
             <div class="background_image" style="background-image: url(<?php echo $image; ?>);">
             </div>
         </section>
