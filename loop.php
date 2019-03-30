@@ -5,7 +5,7 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
-    <div class="news_item ">
+    <div class="column ">
         <div class="news_item_content">
             <h2><?php the_title(); ?></h2>
             <div class="news_date"><?php echo get_the_date(); ?></div>
@@ -21,9 +21,9 @@
 <?php else: ?>
 
     <!-- article -->
-    <article>
+    <div class="column">
         <h2><?php _e( 'Sorry, nothing to display.', 'webfactor' ); ?></h2>
-    </article>
+    </div class="column">
     <!-- /article -->
 
 <?php endif; ?>
