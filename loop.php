@@ -7,7 +7,7 @@
 
     <div class="column ">
         <div class="news_item_content">
-            <h2><?php the_title(); ?></h2>
+            <h2><a  href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
             <p class="news_date"><em><?php echo get_the_date(); ?></em></p>
             <div class="news_excerpt"><?php echo html5wp_excerpt(); ?></div>
         </div>
