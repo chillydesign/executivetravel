@@ -1,13 +1,24 @@
 <?php get_header(); ?>
 
 
+
+
+<section  class="section section_large_image_header">
+    <h1>
+        <div class="container">
+            <?php _e( 'News', 'webfactor' ); ?>
+        </div>
+    </h1>
+    <?php $image = (has_post_thumbnail()) ? thumbnail_of_post_url(the_ID(), 'large') : ''; ?>
+    <div class="background_image" style="background-image: url(<?php echo $image; ?>);">
+    </div>
+</section>
+
+
 <!-- section -->
 <section class="section  section_colonnes">
     <div class="grey colonnes_padding">
         <div class="container">
-
-            <h1><?php _e( 'News', 'webfactor' ); ?></h1>
-
 
             <?php get_template_part('loop'); ?>
 

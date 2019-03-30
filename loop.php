@@ -8,9 +8,8 @@
     <div class="column ">
         <div class="news_item_content">
             <h2><?php the_title(); ?></h2>
-            <div class="news_date"><?php echo get_the_date(); ?></div>
+            <p class="news_date"><em><?php echo get_the_date(); ?></em></p>
             <div class="news_excerpt"><?php echo html5wp_excerpt(); ?></div>
-            <a class="readmore" href="<?php the_permalink();?>">Lire plus</a>
         </div>
     </div>
 
