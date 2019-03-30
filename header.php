@@ -5,9 +5,9 @@
     <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
         <?php $tdu = get_template_directory_uri(); ?>
         <link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $tdu; ?>/img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $tdu; ?>/img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $tdu; ?>/img/favicon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $tdu; ?>/img/bullet.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $tdu; ?>/img/bullet.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $tdu; ?>/img/bullet.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="<?php echo $tdu; ?>/img/favicon/safari-pinned-tab.svg" color="#00476e">
         <meta name="msapplication-TileColor" content="#5bc0d5">
