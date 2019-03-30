@@ -1,6 +1,6 @@
 <?php $content = get_sub_field('content'); ?>
 <?php $background_image = get_sub_field('background_image'); ?>
-<?php if ($content): ?> 
+<?php if ($content): ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-push-3">
@@ -11,7 +11,7 @@
 
 <ul class="reservation_things">
     <li class="plane">
-        <a target="_blank" href="https://www.e-travel.ch/onlinetravel/AMADEUS_ONLINE.htm"><span></span><em>Vols</em></a>
+        <a target="_blank" href="<?php echo site_url(); ?>/reserver-un-vol/"><span></span><em>Vols</em></a>
     </li>
     <li class="sun">
         <a target="_blank" href="https://www.kendros.com/fr/web2web.aspx?W2W=3571346"><span></span><em>Séjours</em></a>
