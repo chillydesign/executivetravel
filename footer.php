@@ -13,7 +13,7 @@
 
           <p>Voyages d’agrément <br>
             +41 (0)22 707 73 10 <br>
-            <a href="mailto:info@e-travel.ch">info@e-travel.ch</a>
+            <a href="mailto:tourisme@e-travel.ch">tourisme@e-travel.ch</a>
           </p>
           <a target="_blank" href="
           https://www.facebook.com/executivetravelsa/?__tn__=%2Cd%2CP-R&eid=ARBxt-MXwp6WQzXa20F1xBpmDbwQs0rktKA252qvw22xBOJZmdRrAN7UdpuUT3vHZlyW-GxAi4uKZctj" class="social_icon fb_footer">Facebook</a>
