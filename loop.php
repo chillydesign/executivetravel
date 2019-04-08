@@ -5,7 +5,7 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
-    <div class="column ">
+    <div class="column" style="margin: 0 0 30px">
         <div class="news_item_content">
             <div class="row">
                 <div class="col-sm-3">
