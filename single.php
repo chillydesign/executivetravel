@@ -15,8 +15,15 @@
                 </div>
             </h1>
 
-            <?php $image = get_field('image'); ?>
-            <?php $image_url = ( $image )   ?  $image['sizes']['large']   : ''; ?>
+            <?php
+            $image = get_field('image');
+            if ($image):
+                $image_url = $image['sizes']['large'];
+                else :
+                    $image_url = thumbnail_of_post_url(  get_option( 'page_for_posts' ) , 'large');
+                endif;
+                ?>
+
             <div class="background_image" style="background-image: url(<?php echo $image_url; ?>);"></div>
         </section>
 

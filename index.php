@@ -9,8 +9,7 @@
             <?php _e( 'News', 'webfactor' ); ?>
         </div>
     </h1>
-    <?php $blog_id = get_option( 'page_for_posts' ); ?>
-    <?php $image = (has_post_thumbnail()) ? thumbnail_of_post_url( $blog_id, 'large') : ''; ?>
+    <?php $image = thumbnail_of_post_url(  get_option( 'page_for_posts' ) , 'large');  ?>
     <div class="background_image" style="background-image: url(<?php echo $image; ?>);">
     </div>
 </section>

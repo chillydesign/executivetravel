@@ -81,9 +81,7 @@ section.section_large_image {
     background-color: $light_blue;
   }
 
-  .background_image {
-    background: $light_grey;
-  }
+
 }
 // LARGE IMAGE
 // LARGE IMAGE
@@ -330,6 +328,7 @@ section.section_large_image_with_links {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background-color: $light_grey;
 }
 // LARGE IMAGE WITH LINKS
 // LARGE IMAGE WITH LINKS
