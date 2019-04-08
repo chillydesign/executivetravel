@@ -14,16 +14,22 @@
                     <?php the_title(); ?>
                 </div>
             </h1>
-            <?php $image = (has_post_thumbnail()) ? thumbnail_of_post_url( get_the_ID(), 'large') : ''; ?>
-            <div class="background_image" style="background-image: url(<?php echo $image; ?>);">
-            </div>
+
+            <?php $image = get_field('image'); ?>
+            <?php $image_url = ( $image )   ?  $image['sizes']['large']   : ''; ?>
+            <div class="background_image" style="background-image: url(<?php echo $image_url; ?>);"></div>
         </section>
 
 
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-3">
+                        <?php if (has_post_thumbnail() ) : ?>
+                            <img src="<?php echo thumbnail_of_post_url( get_the_ID(), 'small'); ?>" alt=""/>
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-sm-6">
 
                         <p class="date">Le <?php echo get_the_date(); ?></p>
 
@@ -34,7 +40,7 @@
 
                         <?php edit_post_link(); // Always handy to leave Edit Post Links available ?>
                     </div>
-                </div>
+                 </div><!-- END OF ROW -->
             </div>
         </section>
 
