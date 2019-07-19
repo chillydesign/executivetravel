@@ -7,12 +7,12 @@
 <section id="post-404"  style="background-image: url(<?php echo $background_image;  ?>">
 
     <div class="container">
-        <h1>404 - Vous êtes perdu?</h1>
+        <h1><?php _e('404 - Vous êtes perdu?', 'webfactor'); ?></h1>
         <p>
-            La page que vous recherchez n'existe pas ou a été déplacée.
+            <?php _e('La page que vous recherchez n\'existe pas ou a été déplacée.', 'webfactor'); ?>
         </p>
 
-        <h6><a href="<?php echo get_home_url();?>">Retour à l'accueil</a></h6>
+        <h6><a href="<?php echo get_home_url();?>"><?php _e('Retour à l\'accueil', 'webfactor'); ?></a></h6>
 
 
 

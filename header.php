@@ -41,7 +41,7 @@
             <a href="#" id="menu_button" >Menu</a>
             </div>
             <div id="phone_header">
-              <p>voyages d'affaires : +41 (0)22 929 8 929<br>tourisme : +41 (0)22 707 73 10</p>
+              <p><?php _e('voyages d\'affaires', 'webfactor'); ?> : +41 (0)22 929 8 929<br><?php _e('tourisme', 'webfactor'); ?> : +41 (0)22 707 73 10</p>
             </div>
         </header>
 

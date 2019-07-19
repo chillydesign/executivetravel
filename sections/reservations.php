@@ -11,19 +11,19 @@
 
 <ul class="reservation_things">
     <li class="plane">
-        <a target="_blank" href="<?php echo site_url(); ?>/reserver-un-vol/"><span></span><em>Vols</em></a>
+        <a target="_blank" href="<?php echo site_url(); ?>/reserver-un-vol/"><span></span><em><?php _e('Vols', 'webfactor'); ?></em></a>
     </li>
     <li class="sun">
-        <a target="_blank" href="https://www.kendros.com/fr/web2web.aspx?W2W=3571346"><span></span><em>Séjours</em></a>
+        <a target="_blank" href="https://www.kendros.com/fr/web2web.aspx?W2W=3571346"><span></span><em><?php _e('Séjours', 'webfactor'); ?></em></a>
     </li>
     <li class="bed">
-        <a target="_blank" href="http://www.hotelpronto.com/?affiliateid=30123"><span></span><em>Hotels</em></a>
+        <a target="_blank" href="http://www.hotelpronto.com/?affiliateid=30123"><span></span><em><?php _e('Hotels', 'webfactor'); ?></em></a>
     </li>
     <li class="house">
-        <a target="_blank" href="https://www2.interhome.ch/fr/recherche/?iniframe=1"><span></span><em>Appartements</em></a>
+        <a target="_blank" href="https://www2.interhome.ch/fr/recherche/?iniframe=1"><span></span><em><?php _e('Appartements', 'webfactor'); ?></em></a>
     </li>
     <li class="car">
-        <a target="_blank" href="https://partner.sunnycars.ch/ak/452682/l/CHFR/setLang/chfr/"><span></span><em>Location de voiture</em></a>
+        <a target="_blank" href="https://partner.sunnycars.ch/ak/452682/l/CHFR/setLang/chfr/"><span></span><em><?php _e('Location de voiture', 'webfactor'); ?></em></a>
     </li>
 </ul>
 
