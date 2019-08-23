@@ -29,7 +29,8 @@
       <?php foreach($links as $link): ?>
           <?php $page = $link['page']; ?>
           <?php $image = $link['image']; ?>
-          <a class="large_image_link" href="<?php echo $page->guid; ?>" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);  height: 300px;" >
+          <?php $url = get_permalink($page->ID); ?>
+          <a class="large_image_link" href="<?php echo $url; ?>" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);  height: 300px;" >
               <span><?php echo $page->post_title; ?></span>
           </a>
       <?php endforeach; ?>
