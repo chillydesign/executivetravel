@@ -9,9 +9,10 @@
 <ul class="slickslider">
     <?php foreach ($links as $link): ?>
         <?php $page = $link['page']; ?>
+        <?php $url = get_permalink($page->ID); ?>
         <?php $image = $link['image']; ?>
         <li>
-            <a href="<?php echo $page->guid; ?>">
+            <a href="<?php echo $url; ?>">
             <div class="slide_image" style="background-image: url(<?php echo $image['sizes']['medium']; ?>);" ></div>
             <p><?php echo $page->post_title; ?></p>
             </a>
