@@ -6,6 +6,9 @@
   "scripts": {
     "test": "say hello"
   },
+  "browserslist": [
+    "last 3 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chillydesign/executivetravel.git"
