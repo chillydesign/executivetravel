@@ -36,8 +36,9 @@
             <!-- <div class="container"></div> -->
             <a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
             <div id="menu_items">
-              <?php //do_action('wpml_add_language_selector');  ?>
+              
             <a href="mailto:info@e-travel.ch" id="email_button" >Email</a>
+            <?php chilly_nav('language-navigation'); ?>
             <a href="#" id="phone_button" >Phone</a>
             <a href="#" id="menu_button" >Menu</a>
             </div>
