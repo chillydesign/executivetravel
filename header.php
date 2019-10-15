@@ -38,10 +38,13 @@
             <div id="menu_items">
               
             <a href="mailto:info@e-travel.ch" id="email_button" >Email</a>
+     
+            <a href="#" id="phone_button" >Phone</a>
+
             <ul id="language_menu">
             <?php chilly_nav('language-navigation'); ?>
             </ul>
-            <a href="#" id="phone_button" >Phone</a>
+            
             <a href="#" id="menu_button" >Menu</a>
             </div>
             <div id="phone_header">

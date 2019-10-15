@@ -44,6 +44,7 @@ a.branding {
     background-size: contain;
     margin: 20px 0 0 15px;
     height: #{$header_height - 40px};
+   
     width: 30px;
     filter: grayscale(1) brightness(0) invert(1);
   }
@@ -58,9 +59,12 @@ a.branding {
     margin: 0;
     padding: 0;
     a {
+      line-height: #{$header_height - 40px};
       text-indent: 0;
       color: white;
-      font-size: 13px;
+      font-size: 1.5em;
+      position: relative;
+      top: 4px;
     }
   }
 }
