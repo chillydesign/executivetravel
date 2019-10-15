@@ -162,9 +162,9 @@ ul.reservation_things {
         transform: scale(1.05);
         opacity: 1;
 
-        span {
-          background-size: #{$res_height * 0.61};
-        }
+        // span {
+        //   background-size: #{$res_height * 0.61};
+        // }
       }
     }
 
