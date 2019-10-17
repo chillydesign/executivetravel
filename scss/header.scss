@@ -1,11 +1,7 @@
-
-
-
-
 header#header {
   height: $header_height;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 300;
@@ -20,7 +16,7 @@ a.branding {
   background-size: contain;
   margin: 20px 0;
   background-position: left center;
-  height:  95px;
+  height: 95px;
   width: 300px;
   position: absolute;
   left: 30px;
@@ -35,36 +31,45 @@ a.branding {
   position: absolute;
   z-index: 320;
   right: 30px;
-  top:0;
+  top: 0;
+
   a {
     display: inline-block;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-position:  right center;
+    background-position: right center;
     background-size: contain;
     margin: 20px 0 0 15px;
     height: #{$header_height - 40px};
-   
+
     width: 30px;
     filter: grayscale(1) brightness(0) invert(1);
   }
 }
 
 #language_menu {
-  display:inline-block;
+  display: inline-block;
   margin: 0;
-  padding:0;
+  padding: 0;
+
   li {
-    display:inline-block;
+    display: inline-block;
     margin: 0;
     padding: 0;
+
     a {
-      
+
       text-indent: 0;
       color: white;
       font-size: 1.5em;
       position: relative;
       top: 19px;
+      filter: none !important;
+
+      img {
+        height: 17px;
+        width: 25px;
+      }
     }
   }
 }
@@ -72,34 +77,41 @@ a.branding {
 #menu_button {
   background: url('../img/menu.svg');
 }
+
 #phone_button {
   background: url('../img/phone.svg');
   width: 25px;
   margin-right: 8px;
   margin-left: 22px;
 }
+
 #email_button {
   background: url('../img/email.svg');
 }
 
-header#header.bottomheader{
+header#header.bottomheader {
   background: transparentize($dark_blue, 0.05);
+
   // border-bottom: 2px solid white;
   // a.branding, #menu_items a {filter: grayscale(0) brightness(1) invert(0);}
-  a.branding {filter: grayscale(0) brightness(1) invert(0);   height: #{$header_height - 15px}; }
+  a.branding {
+    filter: grayscale(0) brightness(1) invert(0);
+    height: #{$header_height - 15px};
+  }
 }
 
 
 $nav_width: 300px;
+
 nav#navigation_menu {
   width: $nav_width;
   background: transparentize($brand_color, 0.1);
   transform: translateX(#{$nav_width });
   transition: all 0.3s;
   position: fixed;
-  top:0;
+  top: 0;
   bottom: 0;
-  right:0;
+  right: 0;
   height: 100%;
   height: 100vh;
   z-index: 120;
@@ -111,14 +123,17 @@ nav#navigation_menu {
   ul {
     padding: #{$header_height + 10px} 0 0;
     margin: 0;
+
     li {
       display: block;
       font-size: 1.1em;
+
       a {
         display: block;
         padding: 15px 20px;
         font-size: $font_size;
         color: white;
+
         &:hover {
           background: transparentize(black, 0.92);
         }
@@ -128,6 +143,7 @@ nav#navigation_menu {
 }
 
 $phone_height: 50px;
+
 #phone_header {
   z-index: 310;
   position: absolute;
@@ -135,7 +151,7 @@ $phone_height: 50px;
   right: 67px;
   transition: all 0.3s;
   background: $font_color;
-  transform: translateY( #{$phone_height * -1} );
+  transform: translateY(#{$phone_height * -1});
   opacity: 0;
   padding: 8px 0;
 
