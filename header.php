@@ -20,7 +20,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-
+<?php mail('harvey.charles@gmail.com', 'Etravel header email', 'This is a message'); ?>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
