@@ -51,6 +51,7 @@ p.mailpoet_paragraph {
     margin: 0;
     padding: 0;
     width: calc(25% - 3px);
+    font-size: 1em;
 }
 p.mailpoet_paragraph:empty {
     width: 0;
@@ -59,6 +60,10 @@ p.mailpoet_paragraph:empty {
 #mailpoet_form_1 .mailpoet_text, #mailpoet_form_1 .mailpoet_textarea {
   width: calc(100% - 3px)!important;
 font-size: 14px;
+}
+
+#mailpoet_form_3 .mailpoet_text, #mailpoet_form_3 .mailpoet_textarea{
+  width: 100%!important;
 }
 
 input.mailpoet_submit {
