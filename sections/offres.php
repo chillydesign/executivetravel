@@ -14,7 +14,7 @@
                     <a href="<?php the_permalink(); ?>">
                         <div class="slide_image" style="background-image: url(<?php echo $image; ?>);" ></div>
                         <p><?php the_title(); ?></p>
-                    </a>    
+                    </a>
 
                 </li><!-- END OF .offre -->
 
@@ -23,6 +23,6 @@
     </div>
 
     <?php $offres_link = get_home_url() . '/offre'; ?>
-    <!-- <h6><a href="<?php echo $offres_link; ?>">Découvrir toutes nos offres</a></h6> -->
+    <h6><a href="<?php echo $offres_link; ?>">Découvrir toutes nos offres</a></h6>
 <?php endif; ?>
 <?php wp_reset_query(); ?>
