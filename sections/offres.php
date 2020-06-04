@@ -11,9 +11,10 @@
             <?php while ( $offres_loop -> have_posts() ) : $offres_loop -> the_post(); ?>
                 <?php $image = thumbnail_of_post_url( get_the_ID(), 'medium' ); ?>
                 <li class="offre">
-                    <!-- <a href="<?php the_permalink(); ?>">    </a> -->
+                    <a href="<?php the_permalink(); ?>">
                         <div class="slide_image" style="background-image: url(<?php echo $image; ?>);" ></div>
                         <p><?php the_title(); ?></p>
+                    </a>    
 
                 </li><!-- END OF .offre -->
 
