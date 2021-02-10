@@ -25,17 +25,17 @@
           <p><?php _e('Pour être tenu au courant de nos promotions et actualités vous pouvez vous inscrire à notre newsletter ici', 'webfactor'); ?> </p>
 
           <?php if(ICL_LANGUAGE_CODE=='fr'): ?>
-          <?php $form_widget = new \MailPoet\Form\Widget();
+            <?php $form_widget = new \MailPoet\Form\Widget();
             echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));
-          ?>
+            ?>
 
-        <?php else: ?>
-          <?php $form_widget = new \MailPoet\Form\Widget();
-          echo $form_widget->widget(array('form' => 3, 'form_type' => 'php')); ?>
-        <?php endif; ?>
+          <?php else: ?>
+            <?php $form_widget = new \MailPoet\Form\Widget();
+            echo $form_widget->widget(array('form' => 3, 'form_type' => 'php')); ?>
+          <?php endif; ?>
 
           <div id="garantie_suisse">
-              <img src="<?php echo $tdu; ?>/img/logo_garantie_suisse.jpg" alt="logo fond de garantie suisse" />
+            <img src="<?php echo $tdu; ?>/img/logo_garantie_suisse.jpg" alt="logo fond de garantie suisse" />
           </div>
 
         </div>
@@ -52,13 +52,24 @@
 
 </footer>
 <!-- /footer -->
-<div id="social_bar">
 
-	<ul>
-		<li class="booking_bar"><span class="tittle">Réservation en ligne</span><a href="<?php echo get_home_url(); ?>/reservations-2424-h"><?php include('img/booking.svg'); ?></a></li>
-		<li class="gift_bar"><span class="tittle">Pour offrir</span><a href="<?php echo get_home_url(); ?>/pour-offrir"><?php include('img/gift.svg'); ?></a></li>
-		<li class="contact_bar"><span class="tittle">Contactez-nous</span><a href="<?php echo get_home_url(); ?>/demande-de-renseignements"><?php include('img/contact.svg'); ?></a></li>
-	</ul>
+<div id="social_bar">
+  <ul>
+    <li class="booking_bar">
+      <span class="tittle"><?php _e('nos offres', 'webfactor'); ?></span>
+      <a href="https://w2w.kendros.com/fr/w2w/?W2W=13466431" target="_blank"><?php include('img/booking.svg'); ?></a>
+    </li>
+    <li class="gift_bar">
+      <span class="tittle"><?php _e('pour offrir', 'webfactor'); ?></span>
+      <a href="<?php echo get_home_url(); ?>/bons-cadeaux/"><?php include('img/gift.svg'); ?></a>
+    </li>
+    <li class="contact_bar">
+      <span class="tittle"><?php _e('contactez-nous', 'webfactor'); ?></span>
+      <a href="mailto:info@e-travel.ch" target="_blank"><?php include('img/email.svg'); ?></a>
+    </li>
+  </ul>
+</div>
+
 </div>
 
 
@@ -70,11 +81,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588276-8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'UA-114588276-8');
+gtag('config', 'UA-114588276-8');
 </script>
 
 

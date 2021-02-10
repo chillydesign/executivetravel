@@ -100,7 +100,6 @@ li.parsley-custom-error-message {
 /* SIDEBAR */
 
 #social_bar {
-  display: none;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -132,7 +131,7 @@ li.parsley-custom-error-message {
 #social_bar ul li span.tittle {
     position: absolute;
     right: 58px;
-    background: #a8000e;
+    background: $dark_blue;
     padding: 10px;
     top: 10px;
     border-radius: 4px 0 0 4px;
@@ -141,7 +140,7 @@ li.parsley-custom-error-message {
     color: white;
     font-size: 0.7em;
     line-height: 100%;
-    width: 150px;
+    width: 165px;
 }
 
 #social_bar ul li:hover span.tittle {
@@ -159,7 +158,7 @@ li.parsley-custom-error-message {
     height: 0;
     border-style: solid;
     border-width: 12px 0 12px 12px;
-    border-color: transparent transparent transparent #a8000e;
+    border-color: transparent transparent transparent $dark_blue;
     display: block;
 }
 
@@ -188,11 +187,15 @@ li.parsley-custom-error-message {
     height: auto;
     margin: auto;
 }
+li.contact_bar svg g {
+    fill: #fff;
+}
 
 @media (min-width: 768px) {
     #social_bar {
         position: fixed;
-        top: 100px;
+        top:auto;
+        bottom: 15vh;
         width: auto;
         right: 0;
         left: auto;
@@ -214,12 +217,12 @@ li.parsley-custom-error-message {
         height: 53px;
         line-height: 50px;
         padding: 4px;
-        background: #cd1719;
+        background: $light_blue;
         color: black;
     }
 
     #social_bar ul li:hover a {
-        background: #a8000e;
+        background: $dark_blue;
     }
 
     #social_bar ul li:hover span.tittle {

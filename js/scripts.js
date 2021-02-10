@@ -209,7 +209,7 @@ $(document).on('keydown', function(e){
         }
 
         var $social_bar = $('#social_bar');
-        if ($scrollTop > (300)) {
+        if ($scrollTop > (600)) {
 			$social_bar.addClass('visible_bar');
 		} else {
 			$social_bar.removeClass('visible_bar');
