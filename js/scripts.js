@@ -129,6 +129,8 @@ $(document).on('keydown', function(e){
         $('.homeslider li div.slide_image').css({'height' : $homesliderheight});
 
 
+
+
       	var map_container = $('#agencymap');
         if (map_container.length > 0) {
         	map_container.css({
@@ -205,6 +207,13 @@ $(document).on('keydown', function(e){
         } else {
             $header.removeClass('bottomheader');
         }
+
+        var $social_bar = $('#social_bar');
+        if ($scrollTop > (300)) {
+			$social_bar.addClass('visible_bar');
+		} else {
+			$social_bar.removeClass('visible_bar');
+		}
 
         var $blocs = $('.bloc');
         var $bloc_texts = $('.bloc_text');
