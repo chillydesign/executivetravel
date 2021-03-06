@@ -1,0 +1,6 @@
+#!/bin/bash
+ssh etravel << EOF
+ cd ~/web/wp-content/themes/executivetravel;
+ git pull origin master;
+ echo "DONE!";
+EOF
