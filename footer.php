@@ -55,9 +55,17 @@
 
 <div id="social_bar">
   <ul>
+  <li class="booking_bar">
+      <span class="tittle"><?php _e('vols', 'webfactor'); ?></span>
+      <a href="https://www.e-travel.ch/reserver-un-vol/" target="_blank"><?php include('img/plane.svg'); ?></a>
+    </li>
     <li class="booking_bar">
-      <span class="tittle"><?php _e('nos offres', 'webfactor'); ?></span>
-      <a href="https://w2w.kendros.com/fr/w2w/?W2W=13466431" target="_blank"><?php include('img/booking.svg'); ?></a>
+      <span class="tittle"><?php _e('hôtels', 'webfactor'); ?></span>
+      <a href="https://www.booking.com/index.html?aid=2096805" target="_blank"><?php include('img/bed.svg'); ?></a>
+    </li>
+    <li class="booking_bar">
+      <span class="tittle"><?php _e('séjours', 'webfactor'); ?></span>
+      <a href="https://w2w.kendros.com/fr/w2w/?W2W=13466431" target="_blank"><?php include('img/sun.svg'); ?></a>
     </li>
     <li class="gift_bar">
       <span class="tittle"><?php _e('pour offrir', 'webfactor'); ?></span>
