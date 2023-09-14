@@ -21,14 +21,8 @@
           <div class="fb-like" data-href="https://www.facebook.com/executivetravelsa/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true" style="position: relative; top: 14px;"></div>
 
 
-          <?php $decl_la = (chilly_current_language() == 'en') ?  'declaration_donnes_en' :  'declaration_donnes_fr'; ?>
 
-          <?php $declaration_donnes = get_field($decl_la, 'option'); ?>
-
-          <?php var_dump(chilly_current_language()); ?>
-          <?php var_dump($decl_la); ?>
-          <?php var_dump($declaration_donnes); ?>
-
+          <?php $declaration_donnes = get_field('declaration_donnes', 'option'); ?>
           <div class="declaration_donnes">
             <a target="_blank" href="<?php echo $declaration_donnes['url']; ?>">Déclaration sur la protection des données</a>
           </div>
