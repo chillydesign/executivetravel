@@ -669,5 +669,14 @@ function chilly_add_acf_options() {
     }
 }
 
+function chilly_current_language() {
+    $my_current_lang = ICL_LANGUAGE_CODE;
+
+    if ($my_current_lang == 'en') {
+        return 'en';
+    }
+    return 'fr';
+}
+
 
     ?>

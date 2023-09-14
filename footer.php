@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-sm-4">
           <h3><?php _e('Contactez-nous', 'webfactor'); ?></h3>
-          <p><?php _e('Voyages d\’affaires', 'webfactor'); ?>  <br>
+          <p><?php _e('Voyages d\’affaires', 'webfactor'); ?> <br>
             +41 (0)22 929 8 929 <br>
             <a href="mailto:business@e-travel.ch">business@e-travel.ch</a>
           </p>
@@ -17,19 +17,27 @@
           </p>
           <a target="_blank" href="
           https://www.facebook.com/executivetravelsa/?__tn__=%2Cd%2CP-R&eid=ARBxt-MXwp6WQzXa20F1xBpmDbwQs0rktKA252qvw22xBOJZmdRrAN7UdpuUT3vHZlyW-GxAi4uKZctj" class="social_icon fb_footer">Facebook</a>
-          <a target="_blank"  href="https://www.instagram.com/executive_travel_geneve" class="social_icon insta_footer">Instagram</a>
+          <a target="_blank" href="https://www.instagram.com/executive_travel_geneve" class="social_icon insta_footer">Instagram</a>
           <div class="fb-like" data-href="https://www.facebook.com/executivetravelsa/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true" style="position: relative; top: 14px;"></div>
+
+
+          <?php $decl_la = (chilly_current_language() == 'en') ?  'declaration_donnes_en' :  'declaration_donnes_fr'; ?>
+          <?php $declaration_donnes = get_field($decl_la, 'option'); ?>
+          <div class="declaration_donnes">
+            <a target="_blank" href="<?php echo $declaration_donnes['url']; ?>">Déclaration sur la protection des données</a>
+          </div>
+
         </div>
         <div class="col-sm-8">
           <h3><?php _e('Newsletter', 'webfactor'); ?></h3>
           <p><?php _e('Pour être tenu au courant de nos promotions et actualités vous pouvez vous inscrire à notre newsletter ici', 'webfactor'); ?> </p>
 
-          <?php if(ICL_LANGUAGE_CODE=='fr'): ?>
+          <?php if (ICL_LANGUAGE_CODE == 'fr') : ?>
             <?php $form_widget = new \MailPoet\Form\Widget();
             echo $form_widget->widget(array('form' => 1, 'form_type' => 'php'));
             ?>
 
-          <?php else: ?>
+          <?php else : ?>
             <?php $form_widget = new \MailPoet\Form\Widget();
             echo $form_widget->widget(array('form' => 3, 'form_type' => 'php')); ?>
           <?php endif; ?>
@@ -55,7 +63,7 @@
 
 <div id="social_bar">
   <ul>
-  <li class="booking_bar">
+    <li class="booking_bar">
       <span class="tittle"><?php _e('vols', 'webfactor'); ?></span>
       <a href="https://www.e-travel.ch/reserver-un-vol/" target="_blank"><?php include('img/plane.svg'); ?></a>
     </li>
@@ -81,6 +89,7 @@
 </div>
 
 
+
 </div><!-- END OF rest_of_page -->
 
 <?php wp_footer(); ?>
@@ -89,13 +98,17 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588276-8"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
 
-gtag('config', 'UA-114588276-8');
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114588276-8');
 </script>
 
 
 </body>
+
 </html>
